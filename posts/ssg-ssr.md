@@ -17,6 +17,4 @@ On the other hand, Static Generation is **not** a good idea if you cannot pre-re
 
 In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
 
-
-
-![](/public/350x150.png)
+![](/images/350x150.png)
