@@ -10,6 +10,95 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
+  - name: "settings"
+    label: "Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "Site Settings"
+        file: "settings.yml"
+        description: "General site settings"
+        fields:
+          - label: "Global title"
+            name: "site_title"
+            widget: "string"
+          - label: "Post Settings"
+            name: posts
+            widget: "object"
+            fields:
+              - label: "Number of posts on front page"
+                name: front_limit
+                widget: number
+                min: 1
+                max: 10
+
+      - name: "authors"
+        label: "Authors"
+        file: "authors.yml"
+        description: "Author descriptions"
+        fields:
+          - name: authors
+            label: Authors
+            label_singular: "Author"
+            widget: list
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+                hint: "First and Last"
+              - label: "Description"
+                name: "description"
+                widget: "markdown"
+              - label: "Profile Image"
+                name: "profile_image"
+                widget: "image"
+
+      - name: "categories"
+        label: "Categories"
+        file: "categories.yml"
+        description: "List of categories"
+        fields:
+          - name: categories
+            label: Categories
+            label_singular: "Category"
+            widget: list
+            fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+                hint: "The part of a URL identifies the category"
+              - label: "Display Name"
+                name: "name"
+                widget: "string"
+                hint: "Category name for displaying on the site"
+
+      - name: "tags"
+        label: "Tags"
+        file: "tags.yml"
+        description: "List of tags"
+        fields:
+          - name: tags
+            label: Tags
+            label_singular: "Tag"
+            widget: list
+            fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+                hint: "The part of a URL identifies the tag"
+              - label: "Display Name"
+                name: "name"
+                widget: "string"
+                hint: "Tag name for displaying on the site"
