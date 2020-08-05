@@ -3,6 +3,7 @@ backend:
   branch: master
 media_folder: public/images
 public_folder: images
+
 collections:
   - name: "posts"
     label: "Posts"
@@ -19,7 +20,6 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
-
   - name: "settings"
     label: "Settings"
     delete: false
@@ -43,7 +43,6 @@ collections:
                 widget: number
                 min: 1
                 max: 10
-
       - name: "authors"
         label: "Authors"
         file: "authors.yml"
@@ -64,7 +63,6 @@ collections:
               - label: "Profile Image"
                 name: "profile_image"
                 widget: "image"
-
       - name: "categories"
         label: "Categories"
         file: "categories.yml"
@@ -83,7 +81,6 @@ collections:
                 name: "name"
                 widget: "string"
                 hint: "Category name for displaying on the site"
-
       - name: "tags"
         label: "Tags"
         file: "tags.yml"
