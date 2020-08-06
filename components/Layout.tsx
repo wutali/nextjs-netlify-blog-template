@@ -14,14 +14,14 @@ export default function Layout({ children }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta property="og:title" content="" />
-        <meta property="og:type" content="" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="" />
         <meta property="og:image" content="" />
 
         <link rel="manifest" href="site.webmanifest" />
         <link rel="apple-touch-icon" href="icon.png" />
 
-        <meta name="theme-color" content="#fafafa" />
+        <meta name="theme-color" content="#fff" />
       </Head>
       <Navigation />
       <main>{children}</main>
