@@ -5,7 +5,7 @@ media_folder: public/images
 public_folder: images
 
 collections:
- - name: "settings"
+  - name: "settings"
     label: "Settings"
     delete: false
     editor:
@@ -33,6 +33,80 @@ collections:
             name: "tag_visible"
             widget: "bool"
             default: true
+
+  - name: "meta"
+    label: "Meta"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "authors"
+        label: "Authors"
+        file: "authors.yml"
+        description: "Author descriptions"
+        fields:
+          - name: authors
+            label: Authors
+            label_singular: "Author"
+            widget: list
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+                hint: "First and Last"
+              - label: "Description"
+                name: "description"
+                widget: "markdown"
+              - label: "Profile Image"
+                name: "profile_image"
+                widget: "image"
+      - name: "categories"
+        label: "Categories"
+        file: "categories.yml"
+        description: "List of categories"
+        fields:
+          - name: categories
+            label: Categories
+            label_singular: "Category"
+            widget: list
+            fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+                hint: "The part of a URL identifies the category"
+              - label: "Display Name"
+                name: "name"
+                widget: "string"
+                hint: "Category name for displaying on the site"
+              - label: "Order"
+                name: "order"
+                widget: "number"
+                min: 0
+                hint: "Ordering number for sorting categories to display"
+      - name: "tags"
+        label: "Tags"
+        file: "tags.yml"
+        description: "List of tags"
+        fields:
+          - name: tags
+            label: Tags
+            label_singular: "Tag"
+            widget: list
+            fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+                hint: "The part of a URL identifies the tag"
+              - label: "Display Name"
+                name: "name"
+                widget: "string"
+                hint: "Tag name for displaying on the site"
+              - label: "Order"
+                name: "order"
+                widget: "number"
+                min: 0
+                hint: "Ordering number for sorting tags to display"
+
   - name: "posts"
     label: "Posts"
     folder: "posts"
@@ -52,69 +126,3 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
-  - name: "authors"
-    label: "Authors"
-    file: "authors.yml"
-    description: "Author descriptions"
-    fields:
-      - name: authors
-        label: Authors
-        label_singular: "Author"
-        widget: list
-        fields:
-          - label: "Name"
-            name: "name"
-            widget: "string"
-            hint: "First and Last"
-          - label: "Description"
-            name: "description"
-            widget: "markdown"
-          - label: "Profile Image"
-            name: "profile_image"
-            widget: "image"
-  - name: "categories"
-    label: "Categories"
-    file: "categories.yml"
-    description: "List of categories"
-    fields:
-      - name: categories
-        label: Categories
-        label_singular: "Category"
-        widget: list
-        fields:
-          - label: "Slug"
-            name: "slug"
-            widget: "string"
-            hint: "The part of a URL identifies the category"
-          - label: "Display Name"
-            name: "name"
-            widget: "string"
-            hint: "Category name for displaying on the site"
-          - label: "Order"
-            name: "order"
-            widget: "number"
-            min: 0
-            hint: "Ordering number for sorting categories to display"
-  - name: "tags"
-    label: "Tags"
-    file: "tags.yml"
-    description: "List of tags"
-    fields:
-      - name: tags
-        label: Tags
-        label_singular: "Tag"
-        widget: list
-        fields:
-          - label: "Slug"
-            name: "slug"
-            widget: "string"
-            hint: "The part of a URL identifies the tag"
-          - label: "Display Name"
-            name: "name"
-            widget: "string"
-            hint: "Tag name for displaying on the site"
-          - label: "Order"
-            name: "order"
-            widget: "number"
-            min: 0
-            hint: "Ordering number for sorting tags to display"
