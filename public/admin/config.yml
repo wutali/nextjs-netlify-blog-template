@@ -5,21 +5,6 @@ media_folder: public/images
 public_folder: images
 
 collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "posts"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Publish Date"
-        name: "date"
-        widget: "datetime"
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
   - name: "settings"
     label: "Settings"
     delete: false
@@ -31,18 +16,30 @@ collections:
         file: "settings.yml"
         description: "General site settings"
         fields:
+          - label: "URL"
+            name: "url"
+            widget: "string"
           - label: "Global title"
             name: "site_title"
             widget: "string"
-          - label: "Post Settings"
-            name: posts
-            widget: "object"
-            fields:
-              - label: "Number of posts on front page"
-                name: front_limit
-                widget: number
-                min: 1
-                max: 10
+          - label: "Global description"
+            name: "site_description"
+            widget: "string"
+          - label: "Category visible"
+            name: "category_visible"
+            widget: "bool"
+            default: true
+          - label: "Tag visible"
+            name: "tag_visible"
+            widget: "bool"
+            default: true
+
+  - name: "meta"
+    label: "Meta"
+    delete: false
+    editor:
+      preview: false
+    files:
       - name: "authors"
         label: "Authors"
         file: "authors.yml"
@@ -81,6 +78,11 @@ collections:
                 name: "name"
                 widget: "string"
                 hint: "Category name for displaying on the site"
+              - label: "Order"
+                name: "order"
+                widget: "number"
+                min: 0
+                hint: "Ordering number for sorting categories to display"
       - name: "tags"
         label: "Tags"
         file: "tags.yml"
@@ -99,3 +101,28 @@ collections:
                 name: "name"
                 widget: "string"
                 hint: "Tag name for displaying on the site"
+              - label: "Order"
+                name: "order"
+                widget: "number"
+                min: 0
+                hint: "Ordering number for sorting tags to display"
+
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    fields:
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
