@@ -78,11 +78,6 @@ collections:
                 name: "name"
                 widget: "string"
                 hint: "Category name for displaying on the site"
-              - label: "Order"
-                name: "order"
-                widget: "number"
-                min: 0
-                hint: "Ordering number for sorting categories to display"
       - name: "tags"
         label: "Tags"
         file: "tags.yml"
@@ -101,11 +96,6 @@ collections:
                 name: "name"
                 widget: "string"
                 hint: "Tag name for displaying on the site"
-              - label: "Order"
-                name: "order"
-                widget: "number"
-                min: 0
-                hint: "Ordering number for sorting tags to display"
 
   - name: "posts"
     label: "Posts"
