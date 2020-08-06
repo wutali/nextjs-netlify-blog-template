@@ -27,11 +27,11 @@ collections:
             widget: "string"
           - label: "Category visible"
             name: "category_visible"
-            widget: "bool"
+            widget: "boolean"
             default: true
           - label: "Tag visible"
             name: "tag_visible"
-            widget: "bool"
+            widget: "boolean"
             default: true
 
   - name: "meta"
