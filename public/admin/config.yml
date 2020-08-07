@@ -120,7 +120,7 @@ collections:
         collection: "meta"
         file: "categories.yml"
         searchFields:
-          - "categories.*.name"
+          - "name"
         displayFields:
-          - "categories.*.name"
-        valueField: "categories.*.slug"
+          - "name"
+        valueField: "slug"
