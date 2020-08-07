@@ -127,6 +127,7 @@ collections:
         label_singular: "Tag"
         name: "tags"
         widget: list
+        summary: "{{fields.tag}}"
         field:
           label: Tag
           name: tag
