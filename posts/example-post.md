@@ -2,7 +2,7 @@
 title: "Welcome To Codex"
 date: 2020-06-04T09:19:29-04:00
 slug: "example-post"
---
+---
 
 ## The standard Lorem Ipsum passage
 
