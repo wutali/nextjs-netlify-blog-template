@@ -1,7 +1,11 @@
 ---
-title: "Welcome To Codex"
-date: "2020-06-04"
-slug: "example-post"
+slug: example-post
+title: Welcome To Codex
+date: 2020-06-04
+category: back-end
+tags:
+  - golang
+  - react
 ---
 
 ## The standard Lorem Ipsum passage
