@@ -1,6 +1,6 @@
 ---
 title: "Rich Content"
-date: 2020-06-05
+date: "2020-06-05"
 slug: "rich-content"
 ---
 
@@ -21,4 +21,3 @@ TODO: Define Twitter component
 ## Vimeo Simple Shortcode
 
 TODO: Define Vimeo component
-
