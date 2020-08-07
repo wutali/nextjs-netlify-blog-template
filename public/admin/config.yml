@@ -103,6 +103,7 @@ collections:
     create: true
     slug: "{{slug}}"
     identifier_field: slug
+    summary: "{{title}}"
     fields:
       - label: "Slug"
         name: "slug"
