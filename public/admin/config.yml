@@ -111,6 +111,8 @@ collections:
       - label: "Publish Date"
         name: "date"
         widget: "datetime"
+        dateFormat: "YYYY-MM-DD"
+        timeFormat: false
       - label: Category
         name: "category"
         widget: relation
