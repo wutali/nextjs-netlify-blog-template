@@ -57,9 +57,6 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "markdown"
-              - label: "Profile Image"
-                name: "profile_image"
-                widget: "image"
       - name: "categories"
         label: "Categories"
         file: "categories.yml"
@@ -117,3 +114,13 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+      - label: Category
+        name: "category"
+        widget: relation
+        collection: "meta"
+        file: "categories.yml"
+        searchFields:
+          - "categories.*.name"
+        displayFields:
+          - "categories.*.name"
+        valueField: "categories.*.slug"
