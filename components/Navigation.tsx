@@ -10,7 +10,7 @@ export default function Navigation() {
           </Link>
         </li>
         <li>
-          <Link href="/posts">
+          <Link href="/posts/">
             <a>blog</a>
           </Link>
         </li>

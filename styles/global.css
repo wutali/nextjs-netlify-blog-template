@@ -1,27 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
-}
-
-* {
-  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #fff;
+  color: #111;
 }
 
 a {
-  color: #0070f3;
+  color: #9b9b9b;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+a:active,
 a:hover {
-  text-decoration: underline;
-}
-
-img {
-  max-width: 100%;
-  display: block;
+  color: #000;
 }
