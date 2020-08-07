@@ -1,7 +1,7 @@
 ---
 slug: example-post
 title: Welcome To Codex
-date: '"2020-06-07"'
+date: "'2020-06-08'"
 category: back-end
 tags:
   - golang
