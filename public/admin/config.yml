@@ -111,9 +111,6 @@ collections:
       - label: "Publish Date"
         name: "date"
         widget: "datetime"
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
       - label: Category
         name: "category"
         widget: relation
@@ -124,3 +121,21 @@ collections:
         displayFields:
           - "categories.*.name"
         valueField: "categories.*.slug"
+      - label: Tags
+        label_singular: "Tag"
+        name: "tags"
+        widget: list
+        field:
+          label: Tag
+          name: tag
+          widget: relation
+          collection: "meta"
+          file: "tags"
+          searchFields:
+            - "tags.*.name"
+          displayFields:
+            - "tags.*.name"
+          valueField: "tags.*.slug"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
