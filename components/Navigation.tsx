@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <nav className="root">
+    <>
       <ul>
         <li>
           <Link href="/">
@@ -17,14 +17,10 @@ export default function Navigation() {
       </ul>
       <style jsx>
         {`
-          .root {
-            width: 100px;
-          }
           ul {
             width: auto;
             text-align: right;
             list-style: none;
-            margin-top: 3em;
           }
           li {
             margin-bottom: 1.75em;
@@ -34,6 +30,6 @@ export default function Navigation() {
           }
         `}
       </style>
-    </nav>
+    </>
   );
 }

@@ -8,7 +8,7 @@ type Props = {
 };
 export default function Layout({ children }: Props) {
   return (
-    <div>
+    <div className="root">
       <Head>
         <meta charSet="utf-8" />
         <title>{settings.site_title}</title>
@@ -25,8 +25,24 @@ export default function Layout({ children }: Props) {
 
         <meta name="theme-color" content="#fff" />
       </Head>
-      <Navigation />
+      <nav>
+        <Navigation />
+      </nav>
       <main>{children}</main>
+      <style jsx>
+        {`
+          .root {
+            display: flex;
+            padding: 3em 0;
+          }
+          nav {
+            width: 100px;
+          }
+          main {
+            flex: 1;
+          }
+        `}
+      </style>
     </div>
   );
 }
