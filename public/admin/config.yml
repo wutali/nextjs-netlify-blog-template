@@ -118,9 +118,9 @@ collections:
         name: "category"
         widget: relation
         collection: "meta"
-        file: "categories.yml"
+        file: "categories"
         searchFields:
-          - "name"
+          - "categories.*.name"
         displayFields:
-          - "name"
-        valueField: "slug"
+          - "categories.*.name"
+        valueField: "categories.*.slug"
