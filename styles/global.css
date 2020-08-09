@@ -5,7 +5,14 @@ body {
   font-family: "Ubuntu", sans-serif;
   background-color: #fff;
   color: #111;
+  display: flex;
   height: 100%;
+  flex: 1;
+}
+
+#__next {
+  display: flex;
+  flex: 1;
 }
 
 a {

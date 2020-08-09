@@ -33,12 +33,14 @@ export default function Layout({ children }: Props) {
         {`
           .root {
             display: flex;
+            flex: 1;
             padding: 3em 0;
           }
           nav {
             width: 100px;
           }
           main {
+            display: flex;
             flex: 1;
           }
         `}
