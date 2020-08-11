@@ -1,17 +1,7 @@
-import { GetStaticProps } from "next";
 import Layout from "../components/Layout";
-import { getSortedPostsData } from "../lib/posts";
 import { SocialList } from "../components/SocialList";
 
-export default function Home({
-  allPostsData,
-}: {
-  allPostsData: {
-    date: string;
-    title: string;
-    id: string;
-  }[];
-}) {
+export default function () {
   return (
     <Layout>
       <div className="container">
@@ -55,12 +45,3 @@ export default function Home({
     </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-};

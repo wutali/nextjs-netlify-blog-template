@@ -26,6 +26,7 @@ export default function Navigation() {
             width: auto;
             text-align: right;
             list-style: none;
+            margin: 0;
           }
           li {
             margin-bottom: 1.75em;
