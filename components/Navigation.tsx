@@ -1,17 +1,22 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navigation() {
+  const router = useRouter();
+
   return (
     <>
       <ul>
         <li>
           <Link href="/">
-            <a>about</a>
+            <a className={router.pathname === "/" ? "active" : null}>about</a>
           </Link>
         </li>
         <li>
           <Link href="/posts/">
-            <a>blog</a>
+            <a className={router.pathname === "/posts/" ? "active" : null}>
+              blog
+            </a>
           </Link>
         </li>
       </ul>
@@ -27,6 +32,9 @@ export default function Navigation() {
           }
           li:last-child {
             margin-bottom: 0;
+          }
+          .active {
+            color: #000;
           }
         `}
       </style>
