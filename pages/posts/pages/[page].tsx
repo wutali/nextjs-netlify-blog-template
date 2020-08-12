@@ -1,12 +1,19 @@
 import Layout from "../../../components/Layout";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { getSortedPostsData } from "../../../lib/posts";
-import { it } from "date-fns/locale";
+import { getSortedPostsData, PostContent } from "../../../lib/posts";
+import PostList from "../../../components/PostList";
 
 const settings = require("../../../settings.yml");
 
-export default function () {
-  return <Layout>posts/pages/[page]/</Layout>;
+type Props = {
+  posts: PostContent[];
+};
+export default function ({ posts }: Props) {
+  return (
+    <Layout>
+      <PostList posts={posts} />
+    </Layout>
+  );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
