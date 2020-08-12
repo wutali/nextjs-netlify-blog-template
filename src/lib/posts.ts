@@ -2,7 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
-const postsDirectory = path.join(process.cwd(), "pages/posts");
+const postsDirectory = path.join(process.cwd(), "src/pages/posts");
 
 export type PostContent = {
   date: string;

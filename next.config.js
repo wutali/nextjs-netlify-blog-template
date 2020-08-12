@@ -1,7 +1,7 @@
 const withMdxEnhanced = require("next-mdx-enhanced");
 
 module.exports = withMdxEnhanced({
-  layoutPath: "layouts",
+  layoutPath: "src/layouts",
   defaultLayout: true,
 })({
   pageExtensions: ["mdx", "tsx"],

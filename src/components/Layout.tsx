@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navigation from "./Navigation";
 
-const settings = require("../settings.yml");
+const settings = require("../../settings.yml");
 
 type Props = {
   children: React.ReactNode;

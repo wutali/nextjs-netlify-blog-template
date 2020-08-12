@@ -3,7 +3,7 @@ import { GetStaticProps } from "next";
 import { getSortedPostsData, PostContent } from "../../lib/posts";
 import PostList from "../../components/PostList";
 
-const settings = require("../../settings.yml");
+const settings = require("../../../settings.yml");
 
 type Props = {
   posts: PostContent[];

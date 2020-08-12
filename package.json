@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export -o ./dist"
+    "export": "next build && next export -o ./dist",
+    "test": "jest"
   },
   "dependencies": {
     "@svgr/webpack": "^5.4.0",
@@ -21,8 +22,11 @@
     "remark-html": "^11.0.1"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.9",
     "@types/node": "^13.11.0",
     "@types/react": "^16.9.32",
+    "jest": "^26.3.0",
+    "ts-jest": "^26.2.0",
     "typescript": "^3.8.3",
     "yaml-loader": "^0.6.0"
   }
