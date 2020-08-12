@@ -6,13 +6,13 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "pages/posts");
 
-export type Post = {
+export type PostContent = {
   date: string;
   title: string;
   slug: string;
 };
 
-export function getSortedPostsData(): Post[] {
+export function getSortedPostsData(): PostContent[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames

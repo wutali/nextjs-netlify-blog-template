@@ -1,9 +1,9 @@
-import { Post } from "../lib/posts";
+import { PostContent } from "../lib/posts";
 import Date from "./Date";
 import Link from "next/link";
 
 type Props = {
-  post: Post;
+  post: PostContent;
 };
 export default function ({ post }: Props) {
   return (
