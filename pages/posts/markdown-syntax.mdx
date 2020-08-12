@@ -6,8 +6,6 @@ slug: "markdown-syntax"
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 
-<!--more-->
-
 ## Headings
 
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
@@ -42,6 +40,7 @@ The blockquote element represents content that is quoted from another source, op
 #### Blockquote with attribution
 
 > Simplicity is the ultimate sophistication.
+>
 > <cite>Leonardo da Vinci[^1]</cite>
 
 [^1]: The above quote is often attributed to Leonardo da Vinci but there is no concrete evidence to support this.
@@ -57,7 +56,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Inline Markdown within tables
 
-<div style="overflow-x: auto">
+<div style={{"overflow-x": "auto"}}>
 
 | Inline&nbsp;&nbsp;&nbsp; | Markdown&nbsp;&nbsp;&nbsp; | In&nbsp;&nbsp;&nbsp;                | Table  |
 | ------------------------ | -------------------------- | ----------------------------------- | ------ |
