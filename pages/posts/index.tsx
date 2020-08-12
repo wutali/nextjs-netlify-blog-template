@@ -3,6 +3,8 @@ import { GetStaticProps } from "next";
 import { getSortedPostsData, PostContent } from "../../lib/posts";
 import PostList from "../../components/PostList";
 
+const settings = require("../../settings.yml");
+
 type Props = {
   posts: PostContent[];
 };
@@ -15,7 +17,7 @@ export default function ({ posts }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getSortedPostsData();
+  const posts = getSortedPostsData(0, settings.posts_per_page);
   return {
     props: {
       posts,

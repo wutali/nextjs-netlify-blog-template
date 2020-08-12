@@ -1,8 +1,6 @@
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
-import remark from "remark";
-import html from "remark-html";
+import path from "path";
 
 const postsDirectory = path.join(process.cwd(), "pages/posts");
 
@@ -12,7 +10,12 @@ export type PostContent = {
   slug: string;
 };
 
-export function getSortedPostsData(): PostContent[] {
+export function countPosts(): number {
+  return fs.readdirSync(postsDirectory).filter((it) => it.endsWith(".mdx"))
+    .length;
+}
+
+export function getSortedPostsData(page: number, limit: number): PostContent[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames
@@ -35,11 +38,13 @@ export function getSortedPostsData(): PostContent[] {
       };
     });
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  return allPostsData
+    .sort((a, b) => {
+      if (a.date < b.date) {
+        return 1;
+      } else {
+        return -1;
+      }
+    })
+    .slice(page * limit, (page + 1) * limit);
 }

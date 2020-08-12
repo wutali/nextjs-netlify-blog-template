@@ -1,6 +1,10 @@
 import Layout from "../../../components/Layout";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { getSortedPostsData, PostContent } from "../../../lib/posts";
+import {
+  getSortedPostsData,
+  PostContent,
+  countPosts,
+} from "../../../lib/posts";
 import PostList from "../../../components/PostList";
 
 const settings = require("../../../settings.yml");
@@ -16,8 +20,11 @@ export default function ({ posts }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = getSortedPostsData();
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const posts = getSortedPostsData(
+    parseInt(params.page as string) - 1,
+    settings.posts_per_page
+  );
   return {
     props: {
       posts,
@@ -26,8 +33,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = getSortedPostsData();
-  const pages = Math.ceil(posts.length / settings.posts_per_page);
+  const pages = Math.ceil(countPosts() / settings.posts_per_page);
   const paths = Array.from(Array(pages - 1).keys()).map((it) => ({
     params: { page: (it + 2).toString() },
   }));
