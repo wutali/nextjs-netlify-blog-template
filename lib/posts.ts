@@ -30,8 +30,8 @@ export function getSortedPostsData(): Post[] {
 
       // Combine the data with the id
       return {
-        slug,
         ...(matterResult.data as { date: string; title: string }),
+        slug,
       };
     });
   // Sort posts by date
