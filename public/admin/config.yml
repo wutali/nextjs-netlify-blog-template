@@ -57,24 +57,6 @@ collections:
               - label: "Description"
                 name: "description"
                 widget: "markdown"
-      - name: "categories"
-        label: "Categories"
-        file: "categories.yml"
-        description: "List of categories"
-        fields:
-          - name: categories
-            label: Categories
-            label_singular: "Category"
-            widget: list
-            fields:
-              - label: "Slug"
-                name: "slug"
-                widget: "string"
-                hint: "The part of a URL identifies the category"
-              - label: "Display Name"
-                name: "name"
-                widget: "string"
-                hint: "Category name for displaying on the site"
       - name: "tags"
         label: "Tags"
         file: "tags.yml"
@@ -115,16 +97,16 @@ collections:
         format: "'YYYY-MM-DD'"
         dateFormat: "YYYY-MM-DD"
         timeFormat: false
-      - label: Category
-        name: "category"
+      - label: Author
+        name: "author"
         widget: relation
         collection: "meta"
-        file: "categories"
+        file: "authors"
         searchFields:
-          - "categories.*.name"
+          - "authors.*.name"
         displayFields:
-          - "categories.*.name"
-        valueField: "categories.*.slug"
+          - "authors.*.name"
+        valueField: "authors.*.slug"
       - label: Tags
         label_singular: "Tag"
         name: "tags"

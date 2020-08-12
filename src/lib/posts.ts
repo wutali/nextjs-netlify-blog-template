@@ -5,9 +5,9 @@ import path from "path";
 const postsDirectory = path.join(process.cwd(), "src/pages/posts");
 
 export type PostContent = {
-  date: string;
-  title: string;
-  slug: string;
+  readonly date: string;
+  readonly title: string;
+  readonly slug: string;
 };
 
 export function countPosts(): number {

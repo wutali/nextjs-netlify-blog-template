@@ -1,13 +1,15 @@
 import React from "react";
 import { PostContent } from "../lib/posts";
 import PostItem from "./PostItem";
-import Category from "./Category";
+import Tag from "./Tag";
 import Pagination from "./Pagination";
+import { TagContent } from "../lib/tags";
 
 type Props = {
   posts: PostContent[];
+  tags: TagContent[];
 };
-export default function ({ posts }: Props) {
+export default function ({ posts, tags }: Props) {
   return (
     <div className={"container"}>
       <div className={"posts"}>
@@ -21,15 +23,11 @@ export default function ({ posts }: Props) {
         <Pagination current={3} pages={8} />
       </div>
       <ul className={"categories"}>
-        <li>
-          <Category />
-        </li>
-        <li>
-          <Category />
-        </li>
-        <li>
-          <Category />
-        </li>
+        {tags.map((it, i) => (
+          <li key={i}>
+            <Tag>{it.name}</Tag>
+          </li>
+        ))}
       </ul>
       <style jsx>{`
         .container {
