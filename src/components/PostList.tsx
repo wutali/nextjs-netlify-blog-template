@@ -2,6 +2,7 @@ import React from "react";
 import { PostContent } from "../lib/posts";
 import PostItem from "./PostItem";
 import Category from "./Category";
+import Pagination from "./Pagination";
 
 type Props = {
   posts: PostContent[];
@@ -9,13 +10,16 @@ type Props = {
 export default function ({ posts }: Props) {
   return (
     <div className={"container"}>
-      <ul className={"posts"}>
-        {posts.map((it, i) => (
-          <li key={i}>
-            <PostItem post={it} />
-          </li>
-        ))}
-      </ul>
+      <div className={"posts"}>
+        <ul>
+          {posts.map((it, i) => (
+            <li key={i}>
+              <PostItem post={it} />
+            </li>
+          ))}
+        </ul>
+        <Pagination current={3} pages={8} />
+      </div>
       <ul className={"categories"}>
         <li>
           <Category />
