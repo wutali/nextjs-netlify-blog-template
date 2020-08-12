@@ -96,7 +96,8 @@ collections:
 
   - name: "posts"
     label: "Posts"
-    folder: "posts"
+    folder: "pages/posts"
+    extension: "mdx"
     create: true
     slug: "{{slug}}"
     identifier_field: slug
