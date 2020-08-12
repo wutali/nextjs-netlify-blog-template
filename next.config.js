@@ -1,4 +1,10 @@
-module.exports = {
+const withMdxEnhanced = require("next-mdx-enhanced");
+
+module.exports = withMdxEnhanced({
+  layoutPath: "layouts",
+  defaultLayout: true,
+})({
+  pageExtensions: ["mdx", "tsx"],
   exportTrailingSlash: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push(
@@ -16,4 +22,4 @@ module.exports = {
     );
     return config;
   },
-};
+});
