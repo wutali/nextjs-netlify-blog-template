@@ -4,8 +4,8 @@ module.exports = withMdxEnhanced({
   layoutPath: "src/layouts",
   defaultLayout: true,
 })({
+  trailingSlash: true,
   pageExtensions: ["mdx", "tsx"],
-  exportTrailingSlash: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push(
       ...[
