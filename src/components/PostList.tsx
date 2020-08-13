@@ -17,7 +17,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
   return (
     <div className={"container"}>
       <div className={"posts"}>
-        <ul>
+        <ul className={"post-list"}>
           {posts.map((it, i) => (
             <li key={i}>
               <PostItem post={it} />
@@ -43,7 +43,6 @@ export default function PostList({ posts, tags, pagination }: Props) {
       <style jsx>{`
         .container {
           display: flex;
-          justify-content: space-between;
           margin: 0 auto;
           max-width: 1200px;
           width: 100%;
@@ -56,8 +55,16 @@ export default function PostList({ posts, tags, pagination }: Props) {
         li {
           list-style: none;
         }
+        .posts {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
         .posts li {
           margin-bottom: 1.5rem;
+        }
+        .post-list {
+          flex: 1;
         }
         .categories li {
           margin-bottom: 0.75em;

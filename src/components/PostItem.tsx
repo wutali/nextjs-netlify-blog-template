@@ -15,10 +15,11 @@ export default function PostItem({ post }: Props) {
           {`
             a {
               color: #111;
+              display: inline-block;
             }
             h2 {
               margin: 0;
-              font-weight: 500;
+              font-weight: bold;
             }
           `}
         </style>
