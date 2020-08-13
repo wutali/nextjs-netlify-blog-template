@@ -1,52 +1,26 @@
+import TagPostList from "../../../../components/TagPostList";
 import Layout from "../../../../components/Layout";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { listPostContent, PostContent } from "../../../../lib/posts";
+import {
+  listPostContent,
+  PostContent,
+  countPosts,
+} from "../../../../lib/posts";
 import { listTags, getTag, TagContent } from "../../../../lib/tags";
 import settings from "../../../../lib/settings";
-import PostItem from "../../../../components/PostItem";
-import Pagination from "../../../../components/Pagination";
 
 type Props = {
   posts: PostContent[];
   tag: TagContent;
+  pagination: {
+    current: number;
+    pages: number;
+  };
 };
-export default function ({ posts, tag }: Props) {
+export default function ({ posts, tag, pagination }: Props) {
   return (
     <Layout>
-      <div className={"container"}>
-        <h1>All Posts / {tag.name}</h1>
-        <ul>
-          {posts.map((it, i) => (
-            <li key={i}>
-              <PostItem post={it} />
-            </li>
-          ))}
-        </ul>
-        <Pagination current={3} pages={8} />
-      </div>
-      <style jsx>
-        {`
-          .container {
-            padding: 0 20px;
-            margin: 0 auto;
-            max-width: 1200px;
-            width: 100%;
-            padding: 0 20px;
-          }
-          h1 {
-            padding-left: 30px;
-            margin: 0 0 2rem;
-          }
-          ul {
-            margin: 0;
-            padding-left: 30px;
-          }
-          li {
-            list-style: none;
-            margin-bottom: 1.5rem;
-          }
-        `}
-      </style>
+      <TagPostList posts={posts} tag={tag} pagination={pagination} />
     </Layout>
   );
 }
@@ -55,10 +29,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params.slug as string;
   const posts = listPostContent(1, settings.posts_per_page, slug);
   const tag = getTag(slug);
+  const pagination = {
+    current: 1,
+    pages: Math.ceil(countPosts(slug) / settings.posts_per_page),
+  };
   return {
     props: {
       posts,
       tag,
+      pagination,
     },
   };
 };

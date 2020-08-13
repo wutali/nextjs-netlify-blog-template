@@ -29,7 +29,7 @@ export default function ({ posts, tags, pagination }: Props) {
       <ul className={"categories"}>
         {tags.map((it, i) => (
           <li key={i}>
-            <Tag>{it.name}</Tag>
+            <Tag tag={it} />
           </li>
         ))}
       </ul>

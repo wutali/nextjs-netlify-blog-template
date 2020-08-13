@@ -1,12 +1,13 @@
 import Link from "next/link";
+import { TagContent } from "../lib/tags";
 
 type Props = {
-  children: string;
+  tag: TagContent;
 };
-export default function ({ children }: Props) {
+export default function ({ tag }: Props) {
   return (
-    <Link href={"/"}>
-      <a>{"#" + children}</a>
+    <Link href={"/posts/tags/[slug]"} as={`/posts/tags/${tag.slug}`}>
+      <a>{"#" + tag.name}</a>
     </Link>
   );
 }
