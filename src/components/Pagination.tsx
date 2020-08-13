@@ -5,7 +5,7 @@ type Props = {
   current: number;
   pages: number;
 };
-export default function ({ current, pages }: Props) {
+export default function Pagination({ current, pages }: Props) {
   const pagination = generatePagination(current, pages);
   return (
     <ul>

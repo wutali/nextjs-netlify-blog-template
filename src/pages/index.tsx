@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import { SocialList } from "../components/SocialList";
 
-export default function () {
+export default function Index() {
   return (
     <Layout>
       <div className="container">

@@ -12,7 +12,7 @@ type Props = {
     pages: number;
   };
 };
-export default function ({ posts, tag, pagination }: Props) {
+export default function TagPostList({ posts, tag, pagination }: Props) {
   return (
     <div>
       <div className={"container"}>

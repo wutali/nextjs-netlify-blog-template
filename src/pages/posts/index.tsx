@@ -13,7 +13,7 @@ type Props = {
     pages: number;
   };
 };
-export default function ({ posts, tags, pagination }: Props) {
+export default function Index({ posts, tags, pagination }: Props) {
   return (
     <Layout>
       <PostList posts={posts} tags={tags} pagination={pagination} />

@@ -5,7 +5,7 @@ import Link from "next/link";
 type Props = {
   post: PostContent;
 };
-export default function ({ post }: Props) {
+export default function PostItem({ post }: Props) {
   return (
     <Link href={"/posts/" + post.slug}>
       <a>
