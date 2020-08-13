@@ -35,6 +35,21 @@
   content: "#";
 }
 
+.content pre {
+  display: block;
+  background-color: rgba(27, 31, 35, 0.05);
+  line-height: 1.25rem;
+  padding: 1rem;
+  overflow: auto;
+  margin: 1.75rem 0 0 0;
+}
+
+.content pre code {
+  background-color: transparent;
+  font-size: 100%;
+  padding: 0;
+}
+
 .content code {
   font-family: "Ubuntu Mono", monospace;
   font-size: 85%;
@@ -58,4 +73,24 @@
   margin-left: -0.2em;
   z-index: -1;
   color: #ededed;
+}
+
+.content table {
+  max-width: 100%;
+  border-spacing: 0;
+  margin-top: 1.5rem;
+}
+
+.content table thead {
+  background: #f7f7f7;
+}
+
+.content table th {
+  font-weight: 500;
+}
+
+.content table th,
+.content table td {
+  padding: 0.5em 1em;
+  border: 1px double #eee;
 }
