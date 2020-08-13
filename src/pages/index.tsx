@@ -24,6 +24,7 @@ export default function Index() {
         h1 {
           font-size: 3em;
           margin: 0;
+          letter-spacing: 0;
         }
         h2 {
           font-size: 2.25em;
