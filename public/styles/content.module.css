@@ -1,3 +1,13 @@
+.content {
+  font-family: "Ubuntu", sans-serif;
+  color: #222;
+  font-weight: 200;
+}
+
+.content time {
+  color: #9b9b9b;
+}
+
 .content p {
   line-height: 1.5rem;
 }
