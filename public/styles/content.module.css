@@ -94,3 +94,19 @@
   padding: 0.5em 1em;
   border: 1px double #eee;
 }
+
+.content ol,
+.content ul {
+  padding: 0 0 0 1.5rem;
+  margin: 1.5rem 0 0 0;
+}
+
+.content ol li,
+.content ul li {
+  line-height: 1.5rem;
+}
+
+.content li ol,
+.content li ul {
+  margin: 0;
+}
