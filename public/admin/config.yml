@@ -74,7 +74,7 @@ collections:
 
   - name: "posts"
     label: "Posts"
-    folder: "pages/posts"
+    folder: "src/pages/posts"
     extension: "mdx"
     format: "frontmatter"
     create: true

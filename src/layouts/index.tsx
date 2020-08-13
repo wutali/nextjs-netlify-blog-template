@@ -1,19 +1,20 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Date from "../components/Date";
+import styles from "../../public/styles/content.module.css";
 
 type Props = {
   title: string;
   date: string;
 };
-export default function ({ title, date }: Props) {
+export default function Index({ title, date }: Props) {
   return ({ children: content }) => {
     return (
       <Layout>
         <div className={"post"}>
           <h1>{title}</h1>
           <Date dateString={date} />
-          {content}
+          <div className={styles.content}>{content}</div>
         </div>
         <style jsx>
           {`

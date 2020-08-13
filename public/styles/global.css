@@ -9,7 +9,7 @@ body {
   height: 100%;
   flex: 1;
   font-weight: 200;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
 }
 
 #__next {
