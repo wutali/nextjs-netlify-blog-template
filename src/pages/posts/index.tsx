@@ -1,10 +1,9 @@
 import Layout from "../../components/Layout";
 import { GetStaticProps } from "next";
-import { getSortedPostsData, PostContent } from "../../lib/posts";
+import { listPostContent, PostContent } from "../../lib/posts";
 import PostList from "../../components/PostList";
-import { TagContent, getTags } from "../../lib/tags";
-
-const settings = require("../../../settings.yml");
+import { TagContent, listTags } from "../../lib/tags";
+import settings from "../../lib/settings";
 
 type Props = {
   posts: PostContent[];
@@ -19,8 +18,8 @@ export default function ({ posts, tags }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getSortedPostsData(0, settings.posts_per_page);
-  const tags = getTags();
+  const posts = listPostContent(1, settings.posts_per_page);
+  const tags = listTags();
   return {
     props: {
       posts,

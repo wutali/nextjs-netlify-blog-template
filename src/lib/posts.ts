@@ -8,14 +8,15 @@ export type PostContent = {
   readonly date: string;
   readonly title: string;
   readonly slug: string;
+  readonly tags?: string[];
 };
 
-export function countPosts(): number {
-  return fs.readdirSync(postsDirectory).filter((it) => it.endsWith(".mdx"))
-    .length;
-}
+let postCache: PostContent[];
 
-export function getSortedPostsData(page: number, limit: number): PostContent[] {
+function fetchPostContent(): PostContent[] {
+  if (postCache) {
+    return postCache;
+  }
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames
@@ -33,18 +34,35 @@ export function getSortedPostsData(page: number, limit: number): PostContent[] {
 
       // Combine the data with the id
       return {
-        ...(matterResult.data as { date: string; title: string }),
+        ...(matterResult.data as {
+          date: string;
+          title: string;
+          tags: string[];
+        }),
         slug,
       };
     });
   // Sort posts by date
-  return allPostsData
-    .sort((a, b) => {
-      if (a.date < b.date) {
-        return 1;
-      } else {
-        return -1;
-      }
-    })
-    .slice(page * limit, (page + 1) * limit);
+  postCache = allPostsData.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+  return postCache;
+}
+
+export function countPosts(): number {
+  return fetchPostContent().length;
+}
+
+export function listPostContent(
+  page: number,
+  limit: number,
+  tag?: string
+): PostContent[] {
+  return fetchPostContent()
+    .slice((page - 1) * limit, page * limit)
+    .filter((it) => !tag || (it.tags && it.tags.includes(tag)));
 }

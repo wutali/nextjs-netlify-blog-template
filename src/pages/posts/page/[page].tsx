@@ -1,14 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Layout from "../../../components/Layout";
 import PostList from "../../../components/PostList";
-import {
-  countPosts,
-  getSortedPostsData,
-  PostContent,
-} from "../../../lib/posts";
-import { getTags, TagContent } from "../../../lib/tags";
-
-const settings = require("../../../../settings.yml");
+import { countPosts, listPostContent, PostContent } from "../../../lib/posts";
+import { listTags, TagContent } from "../../../lib/tags";
+import settings from "../../../lib/settings";
 
 type Props = {
   posts: PostContent[];
@@ -23,11 +18,11 @@ export default function ({ posts, tags }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const posts = getSortedPostsData(
+  const posts = listPostContent(
     parseInt(params.page as string) - 1,
     settings.posts_per_page
   );
-  const tags = getTags();
+  const tags = listTags();
   return {
     props: {
       posts,

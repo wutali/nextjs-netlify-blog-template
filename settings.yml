@@ -1,6 +1,4 @@
 url: https://wutali-nextjs-netlify-blog.netlify.app/
 site_title: Next.js Netlify Blog
 site_description: Next.js blog template for Netlify
-category_visible: true
-tag_visible: true
 posts_per_page: 5

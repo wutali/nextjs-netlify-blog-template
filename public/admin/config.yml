@@ -25,10 +25,6 @@ collections:
           - label: "Global description"
             name: "site_description"
             widget: "string"
-          - label: "Category visible"
-            name: "category_visible"
-            widget: "boolean"
-            default: true
           - label: "Tag visible"
             name: "tag_visible"
             widget: "boolean"
