@@ -24,11 +24,11 @@ export default function Index() {
         h1 {
           font-size: 3em;
           margin: 0;
-          letter-spacing: 0;
+          font-weight: 500;
         }
         h2 {
           font-size: 2.25em;
-          font-weight: 500;
+          font-weight: 400;
           line-height: 1.25;
           max-width: 22em;
           letter-spacing: -0.03em;

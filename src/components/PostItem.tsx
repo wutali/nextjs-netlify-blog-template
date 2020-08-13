@@ -19,7 +19,7 @@ export default function PostItem({ post }: Props) {
             }
             h2 {
               margin: 0;
-              font-weight: bold;
+              font-weight: 500;
             }
           `}
         </style>
