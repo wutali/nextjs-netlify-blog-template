@@ -16,7 +16,7 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
   return (
     <div className={"container"}>
       <h1>
-        All Posts / <span>{tag.name}</span>
+        All posts / <span>{tag.name}</span>
       </h1>
       <ul>
         {posts.map((it, i) => (
