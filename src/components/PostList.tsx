@@ -27,7 +27,10 @@ export default function PostList({ posts, tags, pagination }: Props) {
         <Pagination
           current={pagination.current}
           pages={pagination.pages}
-          path={"/posts/"}
+          link={{
+            href: (page) => (page === 1 ? "/posts" : "/posts/page/[page]"),
+            as: (page) => (page === 1 ? null : "/posts/page/" + page),
+          }}
         />
       </div>
       <ul className={"categories"}>

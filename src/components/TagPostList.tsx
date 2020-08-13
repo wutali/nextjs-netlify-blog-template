@@ -27,7 +27,13 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
         <Pagination
           current={pagination.current}
           pages={pagination.pages}
-          path={`/posts/tags/${tag.slug}/`}
+          link={{
+            href: () => "/posts/tags/[[...slug]]",
+            as: (page) =>
+              page === 1
+                ? "/posts/tags/" + tag.slug
+                : `/posts/tags/${tag.slug}/${page}`,
+          }}
         />
       </div>
       <style jsx>

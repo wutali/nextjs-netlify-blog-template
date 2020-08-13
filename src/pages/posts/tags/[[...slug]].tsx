@@ -1,13 +1,9 @@
-import TagPostList from "../../../../components/TagPostList";
-import Layout from "../../../../components/Layout";
+import TagPostList from "../../../components/TagPostList";
+import Layout from "../../../components/Layout";
 import { GetStaticProps, GetStaticPaths } from "next";
-import {
-  listPostContent,
-  PostContent,
-  countPosts,
-} from "../../../../lib/posts";
-import { listTags, getTag, TagContent } from "../../../../lib/tags";
-import settings from "../../../../lib/settings";
+import { listPostContent, PostContent, countPosts } from "../../../lib/posts";
+import { listTags, getTag, TagContent } from "../../../lib/tags";
+import settings from "../../../lib/settings";
 
 type Props = {
   posts: PostContent[];
@@ -27,7 +23,7 @@ export default function Index({ posts, tag, pagination }: Props) {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const queries = params.slug as string[];
-  const [slug, current] = [queries[0], queries[2]];
+  const [slug, current] = [queries[0], queries[1]];
   const posts = listPostContent(
     current ? parseInt(current as string) : 1,
     settings.posts_per_page,
@@ -56,7 +52,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
             params: { slug: [tag.slug] },
           }
         : {
-            params: { slug: [tag.slug, "page", (page + 1).toString()] },
+            params: { slug: [tag.slug, (page + 1).toString()] },
           }
     );
   });

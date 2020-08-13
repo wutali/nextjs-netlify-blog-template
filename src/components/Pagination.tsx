@@ -4,9 +4,12 @@ import Link from "next/link";
 type Props = {
   current: number;
   pages: number;
-  path: string;
+  link: {
+    href: (page: number) => string;
+    as: (page: number) => string;
+  };
 };
-export default function Pagination({ current, pages, path }: Props) {
+export default function Pagination({ current, pages, link }: Props) {
   const pagination = generatePagination(current, pages);
   return (
     <ul>
@@ -15,10 +18,7 @@ export default function Pagination({ current, pages, path }: Props) {
           {it.excerpt ? (
             "..."
           ) : (
-            <Link
-              href={it.page === 1 ? path : path + "page/[page]"}
-              as={it.page === 1 ? null : path + "page/" + it.page}
-            >
+            <Link href={link.href(it.page)} as={link.as(it.page)}>
               <a className={it.page === current ? "active" : null}>{it.page}</a>
             </Link>
           )}
