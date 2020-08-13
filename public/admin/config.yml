@@ -76,7 +76,7 @@ collections:
     label: "Posts"
     folder: "pages/posts"
     extension: "mdx"
-    format: "markdown"
+    format: "frontmatter"
     create: true
     slug: "{{slug}}"
     identifier_field: slug
