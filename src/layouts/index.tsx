@@ -8,7 +8,6 @@ type Props = {
   date: string;
 };
 export default function Index({ title, date }: Props) {
-  console.log(styles);
   return ({ children: content }) => {
     return (
       <Layout>
