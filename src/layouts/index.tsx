@@ -19,7 +19,7 @@ export default function Index({ title, date }: Props) {
         <style jsx>
           {`
             .post {
-              max-width: 34rem;
+              max-width: 36rem;
               width: 100%;
               margin: 0 auto;
             }

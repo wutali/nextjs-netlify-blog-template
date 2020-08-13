@@ -110,3 +110,11 @@
 .content li ul {
   margin: 0;
 }
+
+.content abbr[title] {
+  text-decoration: underline double;
+}
+
+.content kbd {
+  font-family: "Ubuntu Mono", monospace;
+}
