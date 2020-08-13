@@ -14,9 +14,7 @@ export default function ({ current, pages }: Props) {
           {it.excerpt ? (
             "..."
           ) : (
-            <Link
-              href={it.page === current ? "/posts/" : "/posts/p/" + it.page}
-            >
+            <Link href={it.page === 1 ? "/posts/" : "/posts/page/" + it.page}>
               <a className={it.page === current ? "active" : null}>{it.page}</a>
             </Link>
           )}

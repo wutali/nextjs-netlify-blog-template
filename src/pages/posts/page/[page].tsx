@@ -8,25 +8,32 @@ import settings from "../../../lib/settings";
 type Props = {
   posts: PostContent[];
   tags: TagContent[];
+  pagination: {
+    current: number;
+    pages: number;
+  };
 };
-export default function ({ posts, tags }: Props) {
+export default function ({ posts, tags, pagination }: Props) {
   return (
     <Layout>
-      <PostList posts={posts} tags={tags} />
+      <PostList posts={posts} tags={tags} pagination={pagination} />
     </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const posts = listPostContent(
-    parseInt(params.page as string),
-    settings.posts_per_page
-  );
+  const current = parseInt(params.page as string);
+  const posts = listPostContent(current, settings.posts_per_page);
   const tags = listTags();
+  const pagination = {
+    current: current,
+    pages: Math.ceil(countPosts() / settings.posts_per_page),
+  };
   return {
     props: {
       posts,
       tags,
+      pagination,
     },
   };
 };
