@@ -43,3 +43,19 @@
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
 }
+
+.content blockquote {
+  margin: 0 1rem;
+}
+
+.content blockquote::before {
+  position: absolute;
+  content: "\201C";
+  font-size: 6em;
+  font-family: roboto, serif;
+  line-height: 1.5rem;
+  margin-top: 0.1em;
+  margin-left: -0.2em;
+  z-index: -1;
+  color: #ededed;
+}
