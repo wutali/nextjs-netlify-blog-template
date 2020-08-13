@@ -26,11 +26,16 @@ export default function Index({ posts, tag, pagination }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params.slug as string;
-  const posts = listPostContent(1, settings.posts_per_page, slug);
+  const queries = params.slug as string[];
+  const [slug, current] = [queries[0], queries[2]];
+  const posts = listPostContent(
+    current ? parseInt(current as string) : 1,
+    settings.posts_per_page,
+    slug
+  );
   const tag = getTag(slug);
   const pagination = {
-    current: 1,
+    current: current ? parseInt(current as string) : 1,
     pages: Math.ceil(countPosts(slug) / settings.posts_per_page),
   };
   return {
@@ -43,9 +48,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = listTags().map((it) => ({
-    params: { slug: it.slug },
-  }));
+  const paths = listTags().flatMap((tag) => {
+    const pages = Math.ceil(countPosts(tag.slug) / settings.posts_per_page);
+    return Array.from(Array(pages).keys()).map((page) =>
+      page === 0
+        ? {
+            params: { slug: [tag.slug] },
+          }
+        : {
+            params: { slug: [tag.slug, "page", (page + 1).toString()] },
+          }
+    );
+  });
   return {
     paths: paths,
     fallback: false,

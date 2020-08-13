@@ -24,7 +24,11 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
             </li>
           ))}
         </ul>
-        <Pagination current={pagination.current} pages={pagination.pages} />
+        <Pagination
+          current={pagination.current}
+          pages={pagination.pages}
+          path={`/posts/tags/${tag.slug}/`}
+        />
       </div>
       <style jsx>
         {`

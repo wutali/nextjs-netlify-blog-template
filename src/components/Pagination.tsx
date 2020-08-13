@@ -4,8 +4,9 @@ import Link from "next/link";
 type Props = {
   current: number;
   pages: number;
+  path: string;
 };
-export default function Pagination({ current, pages }: Props) {
+export default function Pagination({ current, pages, path }: Props) {
   const pagination = generatePagination(current, pages);
   return (
     <ul>
@@ -15,8 +16,8 @@ export default function Pagination({ current, pages }: Props) {
             "..."
           ) : (
             <Link
-              href="/posts/page/[page]"
-              as={it.page === 1 ? "/posts/" : "/posts/page/" + it.page}
+              href={it.page === 1 ? path : path + "page/[page]"}
+              as={it.page === 1 ? null : path + "page/" + it.page}
             >
               <a className={it.page === current ? "active" : null}>{it.page}</a>
             </Link>

@@ -24,7 +24,11 @@ export default function PostList({ posts, tags, pagination }: Props) {
             </li>
           ))}
         </ul>
-        <Pagination current={pagination.current} pages={pagination.pages} />
+        <Pagination
+          current={pagination.current}
+          pages={pagination.pages}
+          path={"/posts/"}
+        />
       </div>
       <ul className={"categories"}>
         {tags.map((it, i) => (
