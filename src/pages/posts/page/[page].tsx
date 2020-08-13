@@ -19,7 +19,7 @@ export default function ({ posts, tags }: Props) {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const posts = listPostContent(
-    parseInt(params.page as string) - 1,
+    parseInt(params.page as string),
     settings.posts_per_page
   );
   const tags = listTags();
