@@ -14,6 +14,18 @@
         "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap"
       );
       CMS.registerPreviewStyle("/styles/content.module.css");
+      var PostPreview = createClass({
+        render: function () {
+          var entry = this.props.entry;
+          return h(
+            "div",
+            { className: "content" },
+            h("h1", {}, entry.getIn(["data", "title"])),
+            h("div", {}, this.props.widgetFor("body"))
+          );
+        },
+      });
+      CMS.registerPreviewTemplate("posts", PostPreview);
     </script>
   </body>
 </html>
