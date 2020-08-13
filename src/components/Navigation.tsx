@@ -13,7 +13,9 @@ export default function Navigation() {
         </li>
         <li>
           <Link href="/posts">
-            <a className={router.pathname === "/posts" ? "active" : null}>
+            <a
+              className={router.pathname.startsWith("/posts") ? "active" : null}
+            >
               blog
             </a>
           </Link>
@@ -26,6 +28,7 @@ export default function Navigation() {
             text-align: right;
             list-style: none;
             margin: 0;
+            position: fixed;
           }
           li {
             margin-bottom: 1.75em;
