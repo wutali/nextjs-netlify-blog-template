@@ -7,7 +7,7 @@ export function SocialList({}) {
     <div>
       <a
         title="Twitter"
-        href="https://twitter.com/%3cyour%20handle%3e"
+        href="https://twitter.com/"
         target="_blank"
         rel="noopener"
       >
@@ -15,7 +15,7 @@ export function SocialList({}) {
       </a>
       <a
         title="GitHub"
-        href="https://github.com/%3cyour%20handle%3e"
+        href="https://github.com/wutali/nextjs-netlify-blog"
         target="_blank"
         rel="noopener"
       >

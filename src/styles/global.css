@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
 
 html,
 body {
   font-family: "Ubuntu", sans-serif;
   background-color: #fff;
-  color: #111;
+  color: #222;
   display: flex;
   height: 100%;
   flex: 1;
