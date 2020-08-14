@@ -31,12 +31,10 @@ export default function Navigation() {
         <style jsx>
           {`
             .container {
-              display: none;
-            }
-            .container.active {
-              display: block;
+              width: 0;
             }
             ul {
+              opacity: 0;
               width: 100%;
               height: 100vh;
               text-align: right;
@@ -50,6 +48,12 @@ export default function Navigation() {
               flex-direction: column;
               justify-content: center;
               z-index: 1;
+              transform: translateY(100%);
+              transition: opacity 200ms;
+            }
+            .active ul {
+              opacity: 1;
+              transform: translateY(0);
             }
             li {
               margin-bottom: 1.75rem;
@@ -69,6 +73,7 @@ export default function Navigation() {
                 display: block;
               }
               ul {
+                opacity: 1;
                 width: 7rem;
                 top: auto;
                 display: block;

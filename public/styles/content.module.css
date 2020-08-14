@@ -26,7 +26,6 @@
 .content h3,
 .content h4,
 .content h5 {
-  position: relative;
   margin: 2rem 0 0 0;
 }
 
@@ -125,6 +124,13 @@
 }
 
 @media (min-width: 769px) {
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5 {
+    position: relative;
+  }
+
   .content h2::before {
     display: block;
   }
