@@ -47,8 +47,8 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
             flex-direction: column;
           }
           h1 {
-            padding-left: 30px;
             margin: 0 0 2rem;
+            padding: 0;
             font-weight: 100;
             color: #9b9b9b;
           }
@@ -58,7 +58,7 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
           }
           ul {
             margin: 0;
-            padding-left: 30px;
+            padding: 0;
             flex: 1;
           }
           li {

@@ -40,7 +40,7 @@ export default function Index() {
           display: inline-block;
           margin-top: 0.275em;
           color: #9b9b9b;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.05em;
         }
       `}</style>
     </Layout>

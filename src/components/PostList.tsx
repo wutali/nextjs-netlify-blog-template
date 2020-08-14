@@ -50,7 +50,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
         }
         ul {
           margin: 0;
-          padding-left: 30px;
+          padding: 0;
         }
         li {
           list-style: none;

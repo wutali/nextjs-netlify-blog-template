@@ -36,7 +36,7 @@ export default function Layout({ children }: Props) {
             padding: 3em 0;
           }
           nav {
-            width: 100px;
+            width: 7rem;
           }
           main {
             display: flex;
