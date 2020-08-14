@@ -17,6 +17,7 @@ export default function Burger({ active, onClick }: Props) {
             cursor: pointer;
             top: 1rem;
             left: 1.5rem;
+            z-index: 2;
           }
           .meat {
             position: absolute;

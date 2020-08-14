@@ -45,7 +45,7 @@ export default function Index({ title, date, tags }: Props) {
               max-width: 36rem;
               width: 100%;
               margin: 0 auto;
-              padding: 0 1rem;
+              padding: 0 1.5rem;
             }
             article {
               flex: 1;

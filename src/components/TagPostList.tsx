@@ -42,7 +42,7 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
             margin: 0 auto;
             max-width: 1200px;
             width: 100%;
-            padding: 0 20px;
+            padding: 0 1.5rem;
             display: flex;
             flex-direction: column;
           }
@@ -50,6 +50,7 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
             margin: 0 0 2rem;
             padding: 0;
             font-weight: 100;
+            font-size: 1.75rem;
             color: #9b9b9b;
           }
           h1 span {
@@ -64,6 +65,12 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
           li {
             list-style: none;
             margin-bottom: 1.5rem;
+          }
+
+          @media (min-width: 769px) {
+            h1 {
+              font-size: 2rem;
+            }
           }
         `}
       </style>
