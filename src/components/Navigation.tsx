@@ -77,6 +77,7 @@ export default function Navigation() {
                 width: 7rem;
                 top: auto;
                 display: block;
+                transform: translateY(0);
               }
               li {
                 font-size: 1rem;
