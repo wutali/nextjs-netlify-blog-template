@@ -37,7 +37,7 @@ export default function Navigation() {
             margin-bottom: 0;
           }
           .active {
-            color: #000;
+            color: #222;
           }
         `}
       </style>
