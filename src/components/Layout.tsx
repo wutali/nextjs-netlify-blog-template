@@ -33,7 +33,7 @@ export default function Layout({ children }: Props) {
           .root {
             display: flex;
             flex: 1;
-            padding: 3.75em 0;
+            padding: 4rem 0;
           }
           main {
             display: flex;

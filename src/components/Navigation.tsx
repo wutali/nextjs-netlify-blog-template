@@ -49,6 +49,7 @@ export default function Navigation() {
               display: flex;
               flex-direction: column;
               justify-content: center;
+              z-index: 1;
             }
             li {
               margin-bottom: 1.75rem;

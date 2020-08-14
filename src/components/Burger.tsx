@@ -12,12 +12,13 @@ export default function Burger({ active, onClick }: Props) {
         {`
           .container {
             position: fixed;
-            width: 28px;
-            height: 28px;
+            width: 38px;
+            height: 38px;
             cursor: pointer;
             top: 1rem;
-            left: 1.5rem;
+            left: 1.25rem;
             z-index: 2;
+            background-color: rgba(255, 255, 255, 0.7);
           }
           .meat {
             position: absolute;
