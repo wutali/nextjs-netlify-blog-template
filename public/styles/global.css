@@ -6,10 +6,10 @@ body {
   font-family: "Ubuntu", sans-serif;
   background-color: #fff;
   color: #222;
-  display: flex;
-  height: 100%;
-  flex: 1;
   font-weight: 200;
+  display: flex;
+  flex: 1;
+  min-height: 100%;
 }
 
 #__next {
