@@ -1,7 +1,7 @@
 import React from "react";
 import { PostContent } from "../lib/posts";
 import PostItem from "./PostItem";
-import Tag from "./Tag";
+import TagLink from "./TagLink";
 import Pagination from "./Pagination";
 import { TagContent } from "../lib/tags";
 
@@ -36,7 +36,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
       <ul className={"categories"}>
         {tags.map((it, i) => (
           <li key={i}>
-            <Tag tag={it} />
+            <TagLink tag={it} />
           </li>
         ))}
       </ul>

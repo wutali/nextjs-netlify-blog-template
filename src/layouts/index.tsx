@@ -2,12 +2,15 @@ import React from "react";
 import Layout from "../components/Layout";
 import Date from "../components/Date";
 import styles from "../../public/styles/content.module.css";
+import TagButton from "../components/TagButton";
+import { getTag } from "../lib/tags";
 
 type Props = {
   title: string;
   date: string;
+  tags: string[];
 };
-export default function Index({ title, date }: Props) {
+export default function Index({ title, date, tags }: Props) {
   return ({ children: content }) => {
     return (
       <Layout>
@@ -15,6 +18,13 @@ export default function Index({ title, date }: Props) {
           <h1>{title}</h1>
           <Date dateString={date} />
           <div className={styles.content}>{content}</div>
+          <ul className={"tag-list"}>
+            {tags.map((it) => (
+              <li>
+                <TagButton tag={getTag(it)} />
+              </li>
+            ))}
+          </ul>
         </div>
         <style jsx>
           {`
@@ -23,10 +33,19 @@ export default function Index({ title, date }: Props) {
               width: 100%;
               margin: 0 auto;
             }
-
             h1 {
               margin: 0 0 0.5rem;
               font-size: 2.25rem;
+            }
+            .tag-list {
+              list-style: none;
+              text-align: right;
+              margin: 1.75rem 0 0 0;
+              padding: 0;
+            }
+            .tag-list li {
+              display: inline-block;
+              margin-left: 0.5rem;
             }
           `}
         </style>
