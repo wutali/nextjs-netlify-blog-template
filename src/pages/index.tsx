@@ -20,16 +20,17 @@ export default function Index() {
           align-items: center;
           justify-content: center;
           flex: 1;
+          padding: 0 2rem;
         }
         h1 {
-          font-size: 3rem;
+          font-size: 2.5rem;
           margin: 0;
           font-weight: 500;
         }
         h2 {
-          font-size: 2.25rem;
+          font-size: 1.75rem;
           font-weight: 400;
-          letter-spacing: -0.05em;
+          line-height: 1.25;
         }
         .fancy {
           color: #15847d;
@@ -39,6 +40,15 @@ export default function Index() {
           margin-top: 0.275em;
           color: #9b9b9b;
           letter-spacing: 0.05em;
+        }
+
+        @media (min-width: 769px) {
+          h1 {
+            font-size: 3rem;
+          }
+          h2 {
+            font-size: 2.25rem;
+          }
         }
       `}</style>
     </Layout>
