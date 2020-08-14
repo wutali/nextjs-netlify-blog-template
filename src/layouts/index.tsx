@@ -8,7 +8,7 @@ import { getTag } from "../lib/tags";
 type Props = {
   title: string;
   date: string;
-  tags: string[];
+  tags?: string[];
 };
 export default function Index({ title, date, tags }: Props) {
   return ({ children: content }) => {
@@ -19,11 +19,12 @@ export default function Index({ title, date, tags }: Props) {
           <Date dateString={date} />
           <div className={styles.content}>{content}</div>
           <ul className={"tag-list"}>
-            {tags.map((it, i) => (
-              <li key={i}>
-                <TagButton tag={getTag(it)} />
-              </li>
-            ))}
+            {tags &&
+              tags.map((it, i) => (
+                <li key={i}>
+                  <TagButton tag={getTag(it)} />
+                </li>
+              ))}
           </ul>
         </div>
         <style jsx>
