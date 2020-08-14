@@ -40,8 +40,7 @@ export default function Index({ title, date, tags }: Props) {
         <style jsx>
           {`
             .container {
-              display: flex;
-              flex-direction: column;
+              display: block;
               max-width: 36rem;
               width: 100%;
               margin: 0 auto;
@@ -67,6 +66,13 @@ export default function Index({ title, date, tags }: Props) {
             .social-list {
               margin-top: 3rem;
               text-align: center;
+            }
+
+            @media (min-width: 769px) {
+              .container {
+                display: flex;
+                flex-direction: column;
+              }
             }
           `}
         </style>
