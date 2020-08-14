@@ -13,6 +13,11 @@
   margin: 1.5rem 0 0 0;
 }
 
+.content a {
+  color: blue;
+  text-decoration: underline;
+}
+
 .content h1 {
   margin: 2.5rem 0 0 0;
 }
