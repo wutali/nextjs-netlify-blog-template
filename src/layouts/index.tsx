@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../components/Layout";
-import Date from "../components/Date";
 import styles from "../../public/styles/content.module.css";
+import Date from "../components/Date";
+import Layout from "../components/Layout";
 import TagButton from "../components/TagButton";
 import { getTag } from "../lib/tags";
 
@@ -19,8 +19,8 @@ export default function Index({ title, date, tags }: Props) {
           <Date dateString={date} />
           <div className={styles.content}>{content}</div>
           <ul className={"tag-list"}>
-            {tags.map((it) => (
-              <li>
+            {tags.map((it, i) => (
+              <li key={i}>
                 <TagButton tag={getTag(it)} />
               </li>
             ))}
