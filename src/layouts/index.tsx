@@ -4,6 +4,8 @@ import Date from "../components/Date";
 import Layout from "../components/Layout";
 import TagButton from "../components/TagButton";
 import { getTag } from "../lib/tags";
+import { SocialList } from "../components/SocialList";
+import Copyright from "../components/Copyright";
 
 type Props = {
   title: string;
@@ -14,25 +16,38 @@ export default function Index({ title, date, tags }: Props) {
   return ({ children: content }) => {
     return (
       <Layout>
-        <div className={"post"}>
-          <h1>{title}</h1>
-          <Date dateString={date} />
-          <div className={styles.content}>{content}</div>
-          <ul className={"tag-list"}>
-            {tags &&
-              tags.map((it, i) => (
-                <li key={i}>
-                  <TagButton tag={getTag(it)} />
-                </li>
-              ))}
-          </ul>
+        <div className={"container"}>
+          <article>
+            <h1>{title}</h1>
+            <Date dateString={date} />
+            <div className={styles.content}>{content}</div>
+            <ul className={"tag-list"}>
+              {tags &&
+                tags.map((it, i) => (
+                  <li key={i}>
+                    <TagButton tag={getTag(it)} />
+                  </li>
+                ))}
+            </ul>
+          </article>
+          <footer>
+            <div className={"social-list"}>
+              <SocialList />
+            </div>
+            <Copyright />
+          </footer>
         </div>
         <style jsx>
           {`
-            .post {
+            .container {
+              display: flex;
+              flex-direction: column;
               max-width: 36rem;
               width: 100%;
               margin: 0 auto;
+            }
+            article {
+              flex: 1;
             }
             h1 {
               margin: 0 0 0.5rem;
@@ -47,6 +62,10 @@ export default function Index({ title, date, tags }: Props) {
             .tag-list li {
               display: inline-block;
               margin-left: 0.5rem;
+            }
+            .social-list {
+              margin-top: 3rem;
+              text-align: center;
             }
           `}
         </style>
