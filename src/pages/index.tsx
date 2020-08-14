@@ -20,7 +20,7 @@ export default function Index() {
           align-items: center;
           justify-content: center;
           flex: 1;
-          padding: 0 2rem;
+          padding: 0 1.5rem;
         }
         h1 {
           font-size: 2.5rem;
