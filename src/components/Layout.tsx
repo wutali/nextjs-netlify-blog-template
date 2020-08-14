@@ -19,8 +19,8 @@ export default function Layout({ children }: Props) {
         <meta property="og:url" content={settings.url} />
         <meta property="og:image" content={settings.url + "/og_image.png"} />
 
-        <link rel="manifest" href="site.webmanifest" />
-        <link rel="apple-touch-icon" href="icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="apple-touch-icon" href="/icon.png" />
 
         <meta name="theme-color" content="#fff" />
       </Head>
@@ -31,13 +31,20 @@ export default function Layout({ children }: Props) {
       <style jsx>
         {`
           .root {
-            display: flex;
-            flex: 1;
+            display: block;
             padding: 4rem 0;
+            box-sizing: border-box;
+            height: 100%;
           }
           main {
             display: flex;
             flex: 1;
+          }
+          @media (min-width: 769px) {
+            .root {
+              display: flex;
+              flex: 1;
+            }
           }
         `}
       </style>
