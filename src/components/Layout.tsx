@@ -38,11 +38,14 @@ export default function Layout({ children }: Props) {
           }
           main {
             display: flex;
-            flex: 1;
+            min-height: 100%;
           }
           @media (min-width: 769px) {
             .root {
               display: flex;
+              flex: 1;
+            }
+            main {
               flex: 1;
             }
           }
