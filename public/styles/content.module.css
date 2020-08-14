@@ -36,7 +36,7 @@
   font-weight: 300;
   font-size: 1.5rem;
   color: #9b9b9b;
-  display: block;
+  display: none;
   content: "#";
 }
 
@@ -122,4 +122,10 @@
 
 .content kbd {
   font-family: "Ubuntu Mono", monospace;
+}
+
+@media (min-width: 769px) {
+  .content h2::before {
+    display: block;
+  }
 }

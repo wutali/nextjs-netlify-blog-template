@@ -22,16 +22,14 @@ export default function Index() {
           flex: 1;
         }
         h1 {
-          font-size: 3em;
+          font-size: 3rem;
           margin: 0;
           font-weight: 500;
         }
         h2 {
-          font-size: 2.25em;
+          font-size: 2.25rem;
           font-weight: 400;
-          line-height: 1.25;
-          max-width: 22em;
-          letter-spacing: -0.03em;
+          letter-spacing: -0.05em;
         }
         .fancy {
           color: #15847d;

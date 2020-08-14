@@ -37,10 +37,16 @@ export default function Layout({ children }: Props) {
           }
           nav {
             width: 7rem;
+            display: none;
           }
           main {
             display: flex;
             flex: 1;
+          }
+          @media (min-width: 769px) {
+            nav {
+              display: block;
+            }
           }
         `}
       </style>
