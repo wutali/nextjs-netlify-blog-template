@@ -4,22 +4,32 @@ title: Rich Content
 date: "2020-06-05"
 ---
 
-import Instagram from "../../components/content/Instagram";
+MDX supports to import Reacto component and embed it directly as markdown content.
 
-Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes) for rich content, along with a [Privacy Config](https://gohugo.io/about/hugo-and-gdpr/) and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
+## Instagram with react-instagram-embed
 
-## Instagram Simple Shortcode
+import InstagramEmbed from "react-instagram-embed";
 
-<Instagram></Instagram>
+<p>
+  <InstagramEmbed
+    url="https://instagr.am/p/Zw9o4/"
+    maxWidth={320}
+    hideCaption={true}
+  />
+</p>
 
-## YouTube Privacy Enhanced Shortcode
+## YouTube with react-youtube
 
-TODO: Define YouTube component
+import YouTube from "react-youtube";
+
+<p>
+  <YouTube videoId={"2g811Eo7K8U"} />
+</p>
 
 ## Twitter Simple Shortcode
 
-TODO: Define Twitter component
+import { TwitterTweetEmbed } from "react-twitter-embed";
 
-## Vimeo Simple Shortcode
-
-TODO: Define Vimeo component
+<p>
+  <TwitterTweetEmbed tweetId={"933354946111705097"} />
+</p>
