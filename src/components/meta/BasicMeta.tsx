@@ -16,7 +16,9 @@ export default function BasicMeta({
 }: Props) {
   return (
     <>
-      <title>{title ? [title, config.site_title].join(" | ") : ""}</title>
+      <title>
+        {title ? [title, config.site_title].join(" | ") : config.site_title}
+      </title>
       <meta
         name="description"
         content={description ? description : config.site_description}
