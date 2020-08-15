@@ -1,9 +1,14 @@
 import Layout from "../components/Layout";
 import { SocialList } from "../components/SocialList";
+import Head from "next/head";
+import BasicMeta from "../components/meta/BasicMeta";
 
 export default function Index() {
   return (
     <Layout>
+      <Head>
+        <BasicMeta url={"/"} />
+      </Head>
       <div className="container">
         <div>
           <h1>

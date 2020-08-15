@@ -17,14 +17,22 @@ collections:
         description: "General site settings"
         fields:
           - label: "URL"
-            name: "url"
+            name: "base_url"
             widget: "string"
+            hint: "Do not enter the trailing slash of the URL"
           - label: "Global title"
             name: "site_title"
             widget: "string"
           - label: "Global description"
             name: "site_description"
             widget: "string"
+          - label: "Global keywords"
+            name: "site_keywords"
+            widget: "list"
+            field:
+              label: Keyword
+              name: keyword
+              widget: "string"
           - label: "Tag visible"
             name: "tag_visible"
             widget: "boolean"

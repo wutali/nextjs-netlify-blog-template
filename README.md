@@ -11,7 +11,6 @@ blogs with only using Next.js and Netlify stacks.
 
 ## Features
 
-- Full-text search:
 - Tagging:
 - Author:
 - Pagination:
@@ -45,3 +44,7 @@ blogs with only using Next.js and Netlify stacks.
 ### Localize CMS
 
 ## Sources
+
+## License
+
+MIT
