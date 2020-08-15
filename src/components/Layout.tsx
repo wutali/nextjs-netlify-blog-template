@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Navigation from "./Navigation";
-import config from "../lib/config";
 
 type Props = {
   children: React.ReactNode;

@@ -1,14 +1,24 @@
-export default function TwitterCardMeta() {
+import config from "../../lib/config";
+
+type Props = {
+  url: string;
+  title?: string;
+  description?: string;
+};
+export default function TwitterCardMeta({ url, title, description }: Props) {
   return (
     <>
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:site" content="@note_PR" />
+      <meta property="twitter:site" content={config.twitter_account} />
+      <meta property="twitter:url" content={config.base_url + url} />
       <meta
-        property="twitter:url"
-        content="https://note.com/bathtub/n/n8b6e5b4b18ee"
+        property="twitter:title"
+        content={title ? [title, config.site_title].join(" | ") : ""}
       />
-      <meta property="twitter:title" content="" />
-      <meta property="twitter:description" content="" />
+      <meta
+        property="twitter:description"
+        content={description ? description : config.site_description}
+      />
     </>
   );
 }

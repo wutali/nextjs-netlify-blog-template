@@ -33,10 +33,9 @@ collections:
               label: Keyword
               name: keyword
               widget: "string"
-          - label: "Tag visible"
-            name: "tag_visible"
-            widget: "boolean"
-            default: true
+          - label: "Twitter account"
+            name: "twitter_account"
+            widget: "string"
 
   - name: "meta"
     label: "Meta"

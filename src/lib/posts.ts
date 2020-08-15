@@ -22,25 +22,28 @@ function fetchPostContent(): PostContent[] {
   const allPostsData = fileNames
     .filter((it) => it.endsWith(".mdx"))
     .map((fileName) => {
-      // Remove ".md" from file name to get slug
-      const slug = fileName.replace(/\.mdx$/, "");
-
       // Read markdown file as string
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, "utf8");
 
       // Use gray-matter to parse the post metadata section
       const matterResult = matter(fileContents);
-
-      // Combine the data with the id
-      return {
-        ...(matterResult.data as {
-          date: string;
-          title: string;
-          tags: string[];
-        }),
-        slug,
+      const matterData = matterResult.data as {
+        date: string;
+        title: string;
+        tags: string[];
+        slug: string;
       };
+      const slug = fileName.replace(/\.mdx$/, "");
+
+      // Validate slug string
+      if (matterData.slug !== slug) {
+        throw new Error(
+          "slug field not match with the path of its content source"
+        );
+      }
+
+      return matterData;
     });
   // Sort posts by date
   postCache = allPostsData.sort((a, b) => {

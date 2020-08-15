@@ -8,17 +8,39 @@ import { SocialList } from "../components/SocialList";
 import Copyright from "../components/Copyright";
 import Author from "../components/Author";
 import { getAuthor } from "../lib/authors";
+import { BlogPosting } from "schema-dts";
+import { jsonLdScriptProps } from "react-schemaorg";
+import BasicMeta from "../components/meta/BasicMeta";
+import Head from "next/head";
 
 type Props = {
   title: string;
   date: string;
+  slug: string;
   tags?: string[];
   author?: string;
 };
-export default function Index({ title, date, author, tags }: Props) {
+export default function Index({ title, date, slug, author, tags }: Props) {
   return ({ children: content }) => {
     return (
       <Layout>
+        <Head>
+          <BasicMeta url={`/posts/${slug}`} />
+          <script
+            {...jsonLdScriptProps<BlogPosting>({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              mainEntityOfPage: "",
+              headline: "",
+              keywords: "",
+              datePublished: "",
+              dateModified: "",
+              author: "",
+              image: "",
+              description: "",
+            })}
+          />
+        </Head>
         <div className={"container"}>
           <article>
             <header>
