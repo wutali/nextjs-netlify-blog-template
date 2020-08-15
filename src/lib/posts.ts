@@ -73,6 +73,6 @@ export function listPostContent(
   tag?: string
 ): PostContent[] {
   return fetchPostContent()
-    .slice((page - 1) * limit, page * limit)
-    .filter((it) => !tag || (it.tags && it.tags.includes(tag)));
+    .filter((it) => !tag || (it.tags && it.tags.includes(tag)))
+    .slice((page - 1) * limit, page * limit);
 }
