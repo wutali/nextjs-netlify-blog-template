@@ -20,21 +20,25 @@ collections:
             name: "base_url"
             widget: "string"
             hint: "Do not enter the trailing slash of the URL"
-          - label: "Global title"
+          - label: "Site title"
             name: "site_title"
             widget: "string"
-          - label: "Global description"
+          - label: "Site description"
             name: "site_description"
             widget: "string"
-          - label: "Global keywords"
+          - label: "Site keywords"
             name: "site_keywords"
             widget: "list"
+            summary: "{{fields.keyword}}"
             field:
               label: Keyword
               name: keyword
               widget: "string"
           - label: "Twitter account"
             name: "twitter_account"
+            widget: "string"
+          - label: "GitHub account"
+            name: "github_account"
             widget: "string"
 
   - name: "meta"
