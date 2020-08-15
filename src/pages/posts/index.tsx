@@ -1,9 +1,13 @@
-import Layout from "../../components/Layout";
 import { GetStaticProps } from "next";
-import { listPostContent, PostContent, countPosts } from "../../lib/posts";
+import Layout from "../../components/Layout";
+import BasicMeta from "../../components/meta/BasicMeta";
+import OpenGraphMeta from "../../components/meta/OpenGraphMeta";
+import TwitterCardMeta from "../../components/meta/TwitterCardMeta";
 import PostList from "../../components/PostList";
-import { TagContent, listTags } from "../../lib/tags";
 import config from "../../lib/config";
+import { countPosts, listPostContent, PostContent } from "../../lib/posts";
+import { listTags, TagContent } from "../../lib/tags";
+import Head from "next/head";
 
 type Props = {
   posts: PostContent[];
@@ -14,8 +18,15 @@ type Props = {
   };
 };
 export default function Index({ posts, tags, pagination }: Props) {
+  const url = "/posts";
+  const title = "All posts";
   return (
     <Layout>
+      <Head>
+        <BasicMeta url={url} title={title} />
+        <OpenGraphMeta url={url} title={title} />
+        <TwitterCardMeta url={url} title={title} />
+      </Head>
       <PostList posts={posts} tags={tags} pagination={pagination} />
     </Layout>
   );

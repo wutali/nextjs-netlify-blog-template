@@ -30,7 +30,7 @@ function fetchPostContent(): PostContent[] {
       // Use gray-matter to parse the post metadata section
       const matterResult = matter(fileContents, {
         engines: {
-          yaml: (s) => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }),
+          yaml: (s) => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }) as object,
         },
       });
       const matterData = matterResult.data as {
