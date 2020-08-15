@@ -35,32 +35,30 @@ export default function Index({
   return ({ children: content }) => {
     return (
       <Layout>
-        <Head>
-          <BasicMeta
-            url={`/posts/${slug}`}
-            title={title}
-            keywords={keywords}
-            description={description}
-          />
-          <TwitterCardMeta
-            url={`/posts/${slug}`}
-            title={title}
-            description={description}
-          />
-          <OpenGraphMeta
-            url={`/posts/${slug}`}
-            title={title}
-            description={description}
-          />
-          <JsonLdMeta
-            url={`/posts/${slug}`}
-            title={title}
-            keywords={keywords}
-            date={date}
-            author={authorName}
-            description={description}
-          />
-        </Head>
+        <BasicMeta
+          url={`/posts/${slug}`}
+          title={title}
+          keywords={keywords}
+          description={description}
+        />
+        <TwitterCardMeta
+          url={`/posts/${slug}`}
+          title={title}
+          description={description}
+        />
+        <OpenGraphMeta
+          url={`/posts/${slug}`}
+          title={title}
+          description={description}
+        />
+        <JsonLdMeta
+          url={`/posts/${slug}`}
+          title={title}
+          keywords={keywords}
+          date={date}
+          author={authorName}
+          description={description}
+        />
         <div className={"container"}>
           <article>
             <header>
