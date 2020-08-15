@@ -29,7 +29,7 @@ collections:
           - label: "Site keywords"
             name: "site_keywords"
             widget: "list"
-            summary: "{{fields.keyword}}"
+            summary: "{{fields.keyword.keyword}}"
             field:
               label: Keyword
               name: keyword
