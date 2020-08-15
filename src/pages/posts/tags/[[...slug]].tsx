@@ -23,11 +23,9 @@ export default function Index({ posts, tag, pagination, page }: Props) {
   const title = tag.name;
   return (
     <Layout>
-      <Head>
-        <BasicMeta url={url} title={title} />
-        <OpenGraphMeta url={url} title={title} />
-        <TwitterCardMeta url={url} title={title} />
-      </Head>
+      <BasicMeta url={url} title={title} />
+      <OpenGraphMeta url={url} title={title} />
+      <TwitterCardMeta url={url} title={title} />
       <TagPostList posts={posts} tag={tag} pagination={pagination} />
     </Layout>
   );

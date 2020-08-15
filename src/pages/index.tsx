@@ -8,11 +8,9 @@ import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 export default function Index() {
   return (
     <Layout>
-      <Head>
-        <BasicMeta url={"/"} />
-        <OpenGraphMeta url={"/"} />
-        <TwitterCardMeta url={"/"} />
-      </Head>
+      <BasicMeta url={"/"} />
+      <OpenGraphMeta url={"/"} />
+      <TwitterCardMeta url={"/"} />
       <div className="container">
         <div>
           <h1>

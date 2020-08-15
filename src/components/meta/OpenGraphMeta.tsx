@@ -1,3 +1,4 @@
+import Head from "next/head";
 import config from "../../lib/config";
 
 type Props = {
@@ -13,7 +14,7 @@ export default function OpenGraphMeta({
   image,
 }: Props) {
   return (
-    <>
+    <Head>
       <meta property="og:site_name" content={config.site_title} />
       <meta property="og:url" content={config.base_url + url} />
       <meta
@@ -24,8 +25,11 @@ export default function OpenGraphMeta({
         property="og:description"
         content={description ? description : config.site_description}
       />
-      <meta property="og:image" content={config.base_url + "/og_image.png"} />
+      <meta
+        property="og:image"
+        content={image ? image : config.base_url + "/og_image.png"}
+      />
       <meta property="og:type" content="article" />
-    </>
+    </Head>
   );
 }
