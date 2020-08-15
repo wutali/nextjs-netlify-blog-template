@@ -27,6 +27,7 @@
 .content h4,
 .content h5 {
   margin: 2rem 0 0 0;
+  line-height: 1.25em;
 }
 
 .content h2::before {
