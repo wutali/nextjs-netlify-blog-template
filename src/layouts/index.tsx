@@ -16,7 +16,7 @@ import { getTag } from "../lib/tags";
 
 type Props = {
   title: string;
-  date: string;
+  date: Date;
   slug: string;
   description: string;
   tags: string[];
@@ -56,7 +56,7 @@ export default function Index({
             url={`/posts/${slug}`}
             title={title}
             keywords={keywords}
-            dateString={date}
+            date={date}
             author={authorName}
             description={description}
           />
@@ -67,7 +67,7 @@ export default function Index({
               <h1>{title}</h1>
               <div className={"metadata"}>
                 <div>
-                  <Date dateString={date} />
+                  <Date date={date} />
                 </div>
                 <div>
                   <Author author={getAuthor(author)} />

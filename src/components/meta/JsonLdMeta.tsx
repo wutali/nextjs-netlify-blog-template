@@ -7,7 +7,7 @@ type Props = {
   url: string;
   title: string;
   keywords?: string[];
-  dateString: string;
+  date: Date;
   author?: string;
   image?: string;
   description?: string;
@@ -16,12 +16,11 @@ export default function JsonLdMeta({
   url,
   title,
   keywords,
-  dateString,
+  date,
   author,
   image,
   description,
 }: Props) {
-  const date = parseISO(dateString);
   return (
     <script
       {...jsonLdScriptProps<BlogPosting>({

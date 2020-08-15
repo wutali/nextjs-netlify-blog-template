@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import yaml from "js-yaml";
 
 const postsDirectory = path.join(process.cwd(), "src/pages/posts");
 
@@ -27,7 +28,11 @@ function fetchPostContent(): PostContent[] {
       const fileContents = fs.readFileSync(fullPath, "utf8");
 
       // Use gray-matter to parse the post metadata section
-      const matterResult = matter(fileContents);
+      const matterResult = matter(fileContents, {
+        engines: {
+          yaml: (s) => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }),
+        },
+      });
       const matterData = matterResult.data as {
         date: string;
         title: string;
