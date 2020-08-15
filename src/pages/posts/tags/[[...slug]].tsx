@@ -3,7 +3,7 @@ import Layout from "../../../components/Layout";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { listPostContent, PostContent, countPosts } from "../../../lib/posts";
 import { listTags, getTag, TagContent } from "../../../lib/tags";
-import settings from "../../../lib/settings";
+import config from "../../../lib/config";
 
 type Props = {
   posts: PostContent[];
@@ -26,13 +26,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const [slug, current] = [queries[0], queries[1]];
   const posts = listPostContent(
     current ? parseInt(current as string) : 1,
-    settings.posts_per_page,
+    config.posts_per_page,
     slug
   );
   const tag = getTag(slug);
   const pagination = {
     current: current ? parseInt(current as string) : 1,
-    pages: Math.ceil(countPosts(slug) / settings.posts_per_page),
+    pages: Math.ceil(countPosts(slug) / config.posts_per_page),
   };
   return {
     props: {
@@ -45,7 +45,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = listTags().flatMap((tag) => {
-    const pages = Math.ceil(countPosts(tag.slug) / settings.posts_per_page);
+    const pages = Math.ceil(countPosts(tag.slug) / config.posts_per_page);
     return Array.from(Array(pages).keys()).map((page) =>
       page === 0
         ? {

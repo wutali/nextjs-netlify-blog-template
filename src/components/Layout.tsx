@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Navigation from "./Navigation";
-import settings from "../lib/settings";
+import config from "../lib/config";
 
 type Props = {
   children: React.ReactNode;
@@ -10,14 +10,14 @@ export default function Layout({ children }: Props) {
     <div className="root">
       <Head>
         <meta charSet="utf-8" />
-        <title>{settings.site_title}</title>
-        <meta name="description" content={settings.site_description} />
+        <title>{config.site_title}</title>
+        <meta name="description" content={config.site_description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property="og:title" content={settings.site_title} />
+        <meta property="og:title" content={config.site_title} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={settings.url} />
-        <meta property="og:image" content={settings.url + "/og_image.png"} />
+        <meta property="og:url" content={config.url} />
+        <meta property="og:image" content={config.url + "/og_image.png"} />
 
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="apple-touch-icon" href="/icon.png" />

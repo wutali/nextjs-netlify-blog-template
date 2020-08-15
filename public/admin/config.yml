@@ -5,15 +5,15 @@ media_folder: public/images
 public_folder: images
 
 collections:
-  - name: "settings"
-    label: "Settings"
+  - name: "config"
+    label: "Config"
     delete: false
     editor:
       preview: false
     files:
       - name: "general"
-        label: "Site Settings"
-        file: "settings.yml"
+        label: "Site Config"
+        file: "config.json"
         description: "General site settings"
         fields:
           - label: "URL"
@@ -38,7 +38,7 @@ collections:
     files:
       - name: "authors"
         label: "Authors"
-        file: "authors.yml"
+        file: "meta/authors.yml"
         description: "Author descriptions"
         fields:
           - name: authors
@@ -46,16 +46,20 @@ collections:
             label_singular: "Author"
             widget: list
             fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+                hint: "The part of a URL identifies the author"
               - label: "Name"
                 name: "name"
                 widget: "string"
                 hint: "First and Last"
-              - label: "Description"
-                name: "description"
-                widget: "markdown"
+              - label: "Introduction"
+                name: "introduction"
+                widget: "text"
       - name: "tags"
         label: "Tags"
-        file: "tags.yml"
+        file: "meta/tags.yml"
         description: "List of tags"
         fields:
           - name: tags
