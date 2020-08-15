@@ -1,44 +1,64 @@
+import Head from "next/head";
 import React from "react";
 import styles from "../../public/styles/content.module.css";
+import Author from "../components/Author";
+import Copyright from "../components/Copyright";
 import Date from "../components/Date";
 import Layout from "../components/Layout";
-import TagButton from "../components/TagButton";
-import { getTag } from "../lib/tags";
-import { SocialList } from "../components/SocialList";
-import Copyright from "../components/Copyright";
-import Author from "../components/Author";
-import { getAuthor } from "../lib/authors";
-import { BlogPosting } from "schema-dts";
-import { jsonLdScriptProps } from "react-schemaorg";
 import BasicMeta from "../components/meta/BasicMeta";
-import Head from "next/head";
+import JsonLdMeta from "../components/meta/JsonLdMeta";
+import OpenGraphMeta from "../components/meta/OpenGraphMeta";
+import TwitterCardMeta from "../components/meta/TwitterCardMeta";
+import { SocialList } from "../components/SocialList";
+import TagButton from "../components/TagButton";
+import { getAuthor } from "../lib/authors";
+import { getTag } from "../lib/tags";
 
 type Props = {
   title: string;
   date: string;
   slug: string;
-  tags?: string[];
-  author?: string;
+  description: string;
+  tags: string[];
+  author: string;
 };
-export default function Index({ title, date, slug, author, tags }: Props) {
+export default function Index({
+  title,
+  date,
+  slug,
+  author,
+  tags,
+  description,
+}: Props) {
+  const keywords = tags.map((it) => getTag(it).name);
+  const authorName = getAuthor(author).name;
   return ({ children: content }) => {
     return (
       <Layout>
         <Head>
-          <BasicMeta url={`/posts/${slug}`} />
-          <script
-            {...jsonLdScriptProps<BlogPosting>({
-              "@context": "https://schema.org",
-              "@type": "BlogPosting",
-              mainEntityOfPage: "",
-              headline: "",
-              keywords: "",
-              datePublished: "",
-              dateModified: "",
-              author: "",
-              image: "",
-              description: "",
-            })}
+          <BasicMeta
+            url={`/posts/${slug}`}
+            title={title}
+            keywords={keywords}
+            description={description}
+          />
+          <TwitterCardMeta
+            url={`/posts/${slug}`}
+            title={title}
+            description={description}
+          />
+          <OpenGraphMeta
+            url={`/posts/${slug}`}
+            title={title}
+            description={description}
+          />
+          <JsonLdMeta
+            url={`/posts/${slug}`}
+            title={title}
+            keywords={keywords}
+            dateString={date}
+            author={authorName}
+            description={description}
           />
         </Head>
         <div className={"container"}>
@@ -50,18 +70,17 @@ export default function Index({ title, date, slug, author, tags }: Props) {
                   <Date dateString={date} />
                 </div>
                 <div>
-                  {author ? <Author author={getAuthor(author)} /> : null}
+                  <Author author={getAuthor(author)} />
                 </div>
               </div>
             </header>
             <div className={styles.content}>{content}</div>
             <ul className={"tag-list"}>
-              {tags &&
-                tags.map((it, i) => (
-                  <li key={i}>
-                    <TagButton tag={getTag(it)} />
-                  </li>
-                ))}
+              {tags.map((it, i) => (
+                <li key={i}>
+                  <TagButton tag={getTag(it)} />
+                </li>
+              ))}
             </ul>
           </article>
           <footer>
