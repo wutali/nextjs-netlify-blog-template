@@ -6,20 +6,32 @@ import TagButton from "../components/TagButton";
 import { getTag } from "../lib/tags";
 import { SocialList } from "../components/SocialList";
 import Copyright from "../components/Copyright";
+import Author from "../components/Author";
+import { getAuthor } from "../lib/authors";
 
 type Props = {
   title: string;
   date: string;
   tags?: string[];
+  author?: string;
 };
-export default function Index({ title, date, tags }: Props) {
+export default function Index({ title, date, author, tags }: Props) {
   return ({ children: content }) => {
     return (
       <Layout>
         <div className={"container"}>
           <article>
-            <h1>{title}</h1>
-            <Date dateString={date} />
+            <header>
+              <h1>{title}</h1>
+              <div className={"metadata"}>
+                <div>
+                  <Date dateString={date} />
+                </div>
+                <div>
+                  {author ? <Author author={getAuthor(author)} /> : null}
+                </div>
+              </div>
+            </header>
             <div className={styles.content}>{content}</div>
             <ul className={"tag-list"}>
               {tags &&
@@ -46,6 +58,10 @@ export default function Index({ title, date, tags }: Props) {
               margin: 0 auto;
               padding: 0 1.5rem;
               box-sizing: border-box;
+            }
+            .metadata div {
+              display: inline-block;
+              margin-right: 0.5rem;
             }
             article {
               flex: 1;
