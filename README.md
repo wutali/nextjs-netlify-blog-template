@@ -82,10 +82,11 @@ src
 
 ### Locale settings for Netlify CMS
 
-Modify [admin/config.yml](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/config.yml) and 
-[admin/index.html](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/index.html) as following instructions:
+Modify [config.yml](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/config.yml) and 
+[index.html](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/index.html) under [public/admin](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/) directory 
+as following instructions:
 
-[https://www.netlifycms.org/docs/configuration-options/#locale](Netlify CMS / Configuration Options / Locale)
+[Netlify CMS - Configuration Options #Locale](https://www.netlifycms.org/docs/configuration-options/#locale)
 
 ## References
 
