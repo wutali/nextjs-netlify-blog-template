@@ -11,9 +11,9 @@ blogs with only using Next.js and Netlify stacks.
 
 ## Features
 
-- **tagging**: organizes content by tags
-- **author**: displays author names who write a post
-- **pagination**: limits number of posts per page
+- **Tagging**: organizes content by tags
+- **Author**: displays author names who write a post
+- **Pagination**: limits number of posts per page
 - **CMS**: built with Netlify CMS to allow editors modifying content wth quickest way
 - **SEO optimized**: built-in metadata like JSON-LD
 
