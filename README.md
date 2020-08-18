@@ -55,6 +55,9 @@ npx create-next-app your-blog --example "https://github.com/wutali/nextjs-netlif
 
 ## Customization
 
+This template is just a template and a boilerplate in which users can customize anything after the project was cloned and started.
+The following instructions introduce common customization points like adding new metadata or applying a new design theme.
+
 ### Styling pages by a customized theme
 
 All codes related to the blog are under [components](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/components), [pages](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/pages) and 
