@@ -85,7 +85,7 @@ Then reference these implementations for adding new metadata:
 - [meta/authors.yml](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/src/meta/authors.yml): author content managed by Netlify CMS
 - [layouts/index.tsx](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/src/layouts/index.tsx): displays author content for each page
 
-You understood they have four steps to add the category metadata on your project:
+You understood they have four steps to add the category metadata on your project after you read the above source codes:
 
 1. Define the category metadata on the above Netlify config file
 2. Create an empty file named with `categories.yml` under [meta](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/src/meta/) directory
