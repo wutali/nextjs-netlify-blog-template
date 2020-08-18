@@ -57,7 +57,7 @@ The following instructions introduce common customization points like adding new
 
 ### Styling pages by a customized theme
 
-All codes related to the blog are under [components](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/components), [pages](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/pages), and 
+All source codes related to the blog are under [components](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/components), [pages](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/pages), and 
 [layouts](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/layouts) directory.
 You can modify it freely if you want to apply your design theme.
 All components use [styled-jsx](https://github.com/vercel/styled-jsx) and [css-modules](https://github.com/css-modules/css-modules) to define their styles, but you can choose any styling libraries for designing your theme.
@@ -72,7 +72,7 @@ src
 ├── components: piece of components consisting pages
 ├── layouts: layout components for each post page
 ├── lib: project libraries like data fetching or pagination
-├── pages: page components managing by Next.js
+└── pages: page components managing by Next.js
 ```
 
 ### Organize content by categories
