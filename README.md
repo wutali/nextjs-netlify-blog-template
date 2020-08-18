@@ -65,14 +65,14 @@ All components use [styled-jsx](https://github.com/vercel/styled-jsx) and [css-m
 The directory tree containing the blog source code are described below:
 
 ```
-meta: 
-public: 
+meta: yaml files defining metadata like authors or tags
+public: images, favicons and other static assets
 src
-├── assets: 
-├── components:
-├── layouts:
-├── lib: 
-├── pages: 
+├── assets: other assets using inside of components
+├── components: piece of components consisting pages
+├── layouts: layout components for each post page
+├── lib: project libraries like data fetching or pagination
+├── pages: page components managing by Next.js
 ```
 
 ### Organize content by categories
