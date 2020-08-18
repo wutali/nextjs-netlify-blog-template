@@ -38,6 +38,13 @@ Or access the following demo site:
 
 ## Getting started
 
+To create your blog using the template, open your terminal, `cd` into the directory you'd like to create the app in,
+and run the following command:
+
+```
+npx create-next-app your-blog --example "https://github.com/wutali/nextjs-netlify-blog-template/tree/master/learn-starter"
+```
+
 ## Usage
 
 ### Modify content by Netlify CMS
@@ -47,6 +54,13 @@ Or access the following demo site:
 ### Preview content before it's released
 
 ## Customization
+
+### Styling pages by a customized theme
+
+All codes related to the blog are under [components](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/components), [pages](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/pages) and 
+[layouts](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/layouts) directory, 
+you can modify it freely if you want to apply your design theme.
+This template uses [styled-jsx](https://github.com/vercel/styled-jsx) and [css-modules](https://github.com/css-modules/css-modules) to define styles of pages but you can choose any styling libraries for designing your theme.
 
 ### Define category metadata
 
