@@ -10,6 +10,16 @@ but they are too simple if you want to build blogs having common feature like ta
 Next.js blog template for Netlify has already implemented these common features for building
 blogs with only using Next.js and Netlify stacks.
 
+## Demo
+
+Deploy on your environment by clicking here:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wutali/nextjs-netlify-blog-template)
+
+Or access the following demo site:
+
+[Next.js blog template for Netlify](https://wutali-nextjs-netlify-blog.netlify.app/)
+
 ## Features
 
 - **Tagging**: organizes content by tags
@@ -25,16 +35,6 @@ blogs with only using Next.js and Netlify stacks.
 - [Next.js](https://nextjs.org/)
 - [Netlify](https://www.netlify.com/)
 - [MDX](https://mdxjs.com/)
-
-## Demo
-
-Deploy on your environment by clicking here:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wutali/nextjs-netlify-blog-template)
-
-Or access the demo site:
-
-[Next.js blog template for Netlify](https://wutali-nextjs-netlify-blog.netlify.app/)
 
 ## Getting started
 
