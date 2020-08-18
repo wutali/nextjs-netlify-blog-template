@@ -1,14 +1,11 @@
 
-# Next.js blog template for Netlify
+# Next.js blogging template for Netlify
 
-This is a boilerplate for building blogs with only Netlify stacks.
+Next.js blogging template for Netlify is a boilerplate for building blogs with only Netlify stacks.
 
-There are some boilerplate or tutorials for the combination of Next.js and Netlify on GitHub.
-These resources have good documentation and good tutorial to get started Next.js and Netlify easily
-but they are too simple if you want to build blogs having common feature like tagging.
+There are some boilerplate or tutorials for the combination of Next.js and Netlify on GitHub. These resources have documentation and good tutorial to get started Next.js and Netlify quickly, but they are too simple to build blogs with standard features like tagging.
 
-Next.js blog template for Netlify has already implemented these common features for building
-blogs with only using Next.js and Netlify stacks.
+Next.js blogging template for Netlify has already implemented these standard features for building blogs with only using Next.js and Netlify stacks.
 
 ## Demo
 
@@ -24,8 +21,8 @@ Or access the following demo site:
 
 - **Tagging**: organizes content by tags
 - **Author**: displays author names who write a post
-- **Pagination**: limits number of posts per page
-- **CMS**: built with CMS to allow editors modifying content wth quickest way
+- **Pagination**: limits the number of posts per page
+- **CMS**: built with CMS to allow editors modifying content with the quickest way
 - **SEO optimized**: built-in metadata like JSON-LD
 - **Shortcode**: extends content writing with React component like WordPress shortcodes
 
@@ -60,9 +57,9 @@ The following instructions introduce common customization points like adding new
 
 ### Styling pages by a customized theme
 
-All codes related to the blog are under [components](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/components), [pages](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/pages) and 
-[layouts](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/layouts) directory, 
-you can modify it freely if you want to apply your design theme.
+All codes related to the blog are under [components](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/components), [pages](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/pages), and 
+[layouts](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/layouts) directory.
+You can modify it freely if you want to apply your design theme.
 All components use [styled-jsx](https://github.com/vercel/styled-jsx) and [css-modules](https://github.com/css-modules/css-modules) to define their styles, but you can choose any styling libraries for designing your theme.
 
 The directory tree containing the blog source code are described below:
