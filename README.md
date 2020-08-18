@@ -63,7 +63,20 @@ The following instructions introduce common customization points like adding new
 All codes related to the blog are under [components](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/components), [pages](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/pages) and 
 [layouts](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/layouts) directory, 
 you can modify it freely if you want to apply your design theme.
-This template uses [styled-jsx](https://github.com/vercel/styled-jsx) and [css-modules](https://github.com/css-modules/css-modules) to define styles of pages but you can choose any styling libraries for designing your theme.
+All components use [styled-jsx](https://github.com/vercel/styled-jsx) and [css-modules](https://github.com/css-modules/css-modules) to define their styles, but you can choose any styling libraries for designing your theme.
+
+The directory tree containing the blog source code are described below:
+
+```
+meta: 
+public: 
+src
+├── assets: 
+├── components:
+├── layouts:
+├── lib: 
+├── pages: 
+```
 
 ### Define category metadata
 
