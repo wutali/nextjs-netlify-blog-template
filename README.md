@@ -41,6 +41,11 @@ and run the following command:
 ```
 npx create-next-app your-blog --example "https://github.com/wutali/nextjs-netlify-blog-template/tree/master/learn-starter"
 ```
+
+After that, setup your project as following the Netlify blog:
+
+[A Step-by-Step Guide: Deploying on Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/)
+
 ## Customization
 
 This template is just a template and a boilerplate in which users can customize anything after the project was cloned and started.
