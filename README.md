@@ -16,6 +16,7 @@ blogs with only using Next.js and Netlify stacks.
 - **Pagination**: limits number of posts per page
 - **CMS**: built with Netlify CMS to allow editors modifying content wth quickest way
 - **SEO optimized**: built-in metadata like JSON-LD
+- **Shortcode**: extends content writing with React component like WordPress shortcodes
 
 ## Dependencies
 
