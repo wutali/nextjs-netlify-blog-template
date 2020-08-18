@@ -1,3 +1,5 @@
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/LICENSE)
+
 # Next.js blog template for Netlify
 
 This is a boilerplate for building blogs with only Netlify stacks.
