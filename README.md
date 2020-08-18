@@ -80,7 +80,12 @@ src
 
 ### Organize content by categories
 
-### CMS localizations
+### Locale settings for Netlify CMS
+
+Modify [admin/config.yml](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/config.yml) and 
+[admin/index.html](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/index.html) as following instructions:
+
+[https://www.netlifycms.org/docs/configuration-options/#locale](Netlify CMS / Configuration Options / Locale)
 
 ## References
 
