@@ -14,16 +14,16 @@ blogs with only using Next.js and Netlify stacks.
 - **Tagging**: organizes content by tags
 - **Author**: displays author names who write a post
 - **Pagination**: limits number of posts per page
-- **CMS**: built with Netlify CMS to allow editors modifying content wth quickest way
+- **CMS**: built with CMS to allow editors modifying content wth quickest way
 - **SEO optimized**: built-in metadata like JSON-LD
 - **Shortcode**: extends content writing with React component like WordPress shortcodes
 
 ## Dependencies
 
-- TypeScript:
-- Next.js:
-- Netlify:
-- MDX:
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [Netlify](https://www.netlify.com/)
+- [MDX](https://mdxjs.com/)
 
 ## Getting started
 
