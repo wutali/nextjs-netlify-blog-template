@@ -1,4 +1,3 @@
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/LICENSE)
 
 # Next.js blog template for Netlify
 
@@ -26,6 +25,16 @@ blogs with only using Next.js and Netlify stacks.
 - [Next.js](https://nextjs.org/)
 - [Netlify](https://www.netlify.com/)
 - [MDX](https://mdxjs.com/)
+
+## Demo
+
+Deploy on your environment by clicking here:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wutali/nextjs-netlify-blog-template)
+
+Or access the demo site:
+
+[Next.js blog template for Netlify](https://wutali-nextjs-netlify-blog.netlify.app/)
 
 ## Getting started
 
