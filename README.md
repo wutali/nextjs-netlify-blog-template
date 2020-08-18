@@ -41,15 +41,6 @@ and run the following command:
 ```
 npx create-next-app your-blog --example "https://github.com/wutali/nextjs-netlify-blog-template/tree/master/learn-starter"
 ```
-
-## Usage
-
-### Modify content by Netlify CMS
-
-### Enable Netlify Large Media to handle large files
-
-### Preview content before it's released
-
 ## Customization
 
 This template is just a template and a boilerplate in which users can customize anything after the project was cloned and started.
