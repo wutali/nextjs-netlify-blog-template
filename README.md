@@ -2,21 +2,20 @@
 
 This is a boilerplate for building blogs with only Netlify stacks.
 
-There are some boilerplate for the combination of Next.js and Netlify on GitHub.
-These boilerplate have good document and good tutorial to get started Next.js and Netlify easily
-but they are too simple if the blog having common features has needed.
+There are some boilerplate or tutorials for the combination of Next.js and Netlify on GitHub.
+These resources have good documentation and good tutorial to get started Next.js and Netlify easily
+but they are too simple if you want to build blogs having common feature like tagging.
 
 Next.js blog template for Netlify has already implemented these common features for building
 blogs with only using Next.js and Netlify stacks.
 
 ## Features
 
-- Tagging:
-- Author:
-- Pagination:
-- CMS:
-- Selectable post layout:
-- Social metadata:
+- tagging: organizes content by tags
+- author: displays author names who write a post
+- pagination: limits number of posts per page
+- CMS: built with Netlify CMS to allow editors modifying content wth quickest way
+- SEO optimized: built-in metadata like JSON-LD
 
 ## Dependencies
 
