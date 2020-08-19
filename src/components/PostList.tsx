@@ -58,13 +58,13 @@ export default function PostList({ posts, tags, pagination }: Props) {
         .posts {
           display: flex;
           flex-direction: column;
-          flex: 1;
+          flex: 1 1 auto;
         }
         .posts li {
           margin-bottom: 1.5rem;
         }
         .post-list {
-          flex: 1;
+          flex: 1 0 auto;
         }
         .categories {
           display: none;

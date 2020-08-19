@@ -25,7 +25,7 @@ export default function Index() {
           display: flex;
           align-items: center;
           justify-content: center;
-          flex: 1;
+          flex: 1 1 auto;
           padding: 0 1.5rem;
         }
         h1 {

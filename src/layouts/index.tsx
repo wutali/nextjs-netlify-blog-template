@@ -103,7 +103,7 @@ export default function Index({
               margin-right: 0.5rem;
             }
             article {
-              flex: 1;
+              flex: 1 0 auto;
             }
             h1 {
               margin: 0 0 0.5rem;

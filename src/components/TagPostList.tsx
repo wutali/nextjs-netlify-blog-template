@@ -60,7 +60,7 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
           ul {
             margin: 0;
             padding: 0;
-            flex: 1;
+            flex: 1 0 auto;
           }
           li {
             list-style: none;
