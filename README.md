@@ -1,5 +1,7 @@
 # Next.js blogging template for Netlify
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c6f44d34-0570-4ca0-9d3d-cabdaa2b3afb/deploy-status)](https://app.netlify.com/sites/nextjs-netlify-blog-template/deploys)
+
 Next.js blogging template for Netlify is a boilerplate for building blogs with only Netlify stacks.
 
 There are some boilerplate or tutorials for the combination of Next.js and Netlify on GitHub. These resources have documentation and good tutorial to get started Next.js and Netlify quickly, but they are too simple to build blogs with standard features like tagging.
@@ -11,6 +13,7 @@ Next.js blogging template for Netlify has already implemented these standard fea
 Deploy on your environment by clicking here:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wutali/nextjs-netlify-blog-template)
+[![MADE BY Next.js](https://img.shields.io/badge/MADE%20BY%20Next.js-000000.svg?style=flat&logo=Next.js&labelColor=000)](https://nextjs.org/)
 
 Or access the following demo site:
 
