@@ -1,4 +1,3 @@
-
 # Next.js blogging template for Netlify
 
 Next.js blogging template for Netlify is a boilerplate for building blogs with only Netlify stacks.
@@ -53,7 +52,7 @@ The following instructions introduce common customization points like adding new
 
 ### Styling pages by a customized theme
 
-All source codes related to the blog are under [components](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/components), [pages](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/pages), and 
+All source codes related to the blog are under [components](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/components), [pages](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/pages), and
 [layouts](https://github.com/wutali/nextjs-netlify-blog-template/tree/master/src/layouts) directory.
 You can modify it freely if you want to apply your design theme.
 All components use [styled-jsx](https://github.com/vercel/styled-jsx) and [css-modules](https://github.com/css-modules/css-modules) to define their styles, but you can choose any styling libraries for designing your theme.
@@ -73,7 +72,7 @@ src
 
 ### Organizing content by categories
 
-The category metadata that associates with content have the same relationship with the authors' one. 
+The category metadata that associates with content have the same relationship with the authors' one.
 Then reference these implementations for adding new metadata:
 
 - [public/admin/config.yml](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/config.yml#L51): author metadata definition for Netlify CMS
@@ -92,8 +91,8 @@ It is all you have to do. After that, you can access Netlify CMS and create new 
 
 ### Locale settings for Netlify CMS
 
-Modify [config.yml](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/config.yml) and 
-[index.html](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/index.html) under [public/admin](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/) directory 
+Modify [config.yml](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/config.yml) and
+[index.html](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/index.html) under [public/admin](https://github.com/wutali/nextjs-netlify-blog-template/blob/master/public/admin/) directory
 as following instructions:
 
 [Netlify CMS - Configuration Options #Locale](https://www.netlifycms.org/docs/configuration-options/#locale)
@@ -105,6 +104,7 @@ as following instructions:
 - [Hugo Theme - Codex](https://github.com/jakewies/hugo-theme-codex)
 - [Next.js Starter Template for TypeScript](https://github.com/vercel/next-learn-starter/tree/master/typescript-final)
 - [Building Blog with NextJS and Netlify CMS](https://dev.to/mefaba/building-blog-with-nextjs-and-netlify-cms-fom)
+- [Unicons](https://github.com/Iconscout/unicons)
 
 ## License
 
