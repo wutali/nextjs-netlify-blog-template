@@ -41,7 +41,7 @@ To create your blog using the template, open your terminal, `cd` into the direct
 and run the following command:
 
 ```
-npx create-next-app your-blog --example "https://github.com/wutali/nextjs-netlify-blog-template/tree/master/learn-starter"
+npx create-next-app your-blog --example "https://github.com/wutali/nextjs-netlify-blog-template"
 ```
 
 After that, set up your project as following the Netlify blog:
