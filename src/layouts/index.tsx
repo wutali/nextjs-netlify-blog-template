@@ -13,6 +13,7 @@ import { SocialList } from "../components/SocialList";
 import TagButton from "../components/TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
+import katex from 'katex';
 
 type Props = {
   title: string;
@@ -31,6 +32,7 @@ export default function Index({
   description,
 }: Props) {
   const keywords = tags.map((it) => getTag(it).name);
+  const katex = require('katex');
   const authorName = getAuthor(author).name;
   return ({ children: content }) => {
     return (
