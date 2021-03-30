@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import path from "path";
 import yaml from "js-yaml";
 
-const postsDirectory = path.join(process.cwd(), "src/pages/posts");
+const postsDirectory = path.join(process.cwd(), "content/posts");
 
 export type PostContent = {
   readonly date: string;
