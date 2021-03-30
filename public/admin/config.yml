@@ -90,7 +90,7 @@ collections:
 
   - name: "posts"
     label: "Posts"
-    folder: "src/pages/posts"
+    folder: "content/posts/"
     extension: "mdx"
     format: "frontmatter"
     create: true
