@@ -10,6 +10,7 @@ export type PostContent = {
   readonly title: string;
   readonly slug: string;
   readonly tags?: string[];
+  readonly fullPath: string;
 };
 
 let postCache: PostContent[];
@@ -38,7 +39,10 @@ function fetchPostContent(): PostContent[] {
         title: string;
         tags: string[];
         slug: string;
+        fullPath: string,
       };
+      matterData.fullPath = fullPath;
+
       const slug = fileName.replace(/\.mdx$/, "");
 
       // Validate slug string
