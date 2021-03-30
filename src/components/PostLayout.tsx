@@ -14,13 +14,14 @@ import TagButton from "../components/TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
 
+
 type Props = {
   title: string;
-  date: Date;
+  date: string;
   slug: string;
-  description: string;
   tags: string[];
   author: string;
+  description?: string;
 };
 export default function Index({
   title,
@@ -28,7 +29,7 @@ export default function Index({
   slug,
   author,
   tags,
-  description,
+  description = "",
 }: Props) {
   const keywords = tags.map((it) => getTag(it).name);
   const authorName = getAuthor(author).name;
