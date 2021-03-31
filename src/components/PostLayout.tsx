@@ -12,8 +12,6 @@ import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
-import { MdxRemote } from "next-mdx-remote/types"
-import hydrate from "next-mdx-remote/hydrate"
 
 type Props = {
   title: string;
@@ -21,9 +19,8 @@ type Props = {
   slug: string;
   tags: string[];
   author: string;
-  components: MdxRemote.Components;
-  source: MdxRemote.Source;
   description?: string;
+  children: React.ReactNode;
 };
 export default function PostLayout({
   title,
@@ -31,12 +28,10 @@ export default function PostLayout({
   slug,
   author,
   tags,
-  source,
-  components,
   description = "",
+  children,
 }: Props) {
-  const content = hydrate(source, { components });
-  const keywords = tags.map((it) => getTag(it).name);
+  const keywords = tags.map(it => getTag(it).name);
   const authorName = getAuthor(author).name;
   return (
     <Layout>
@@ -77,7 +72,7 @@ export default function PostLayout({
               </div>
             </div>
           </header>
-          <div className={styles.content}>{content}</div>
+          <div className={styles.content}>{children}</div>
           <ul className={"tag-list"}>
             {tags.map((it, i) => (
               <li key={i}>
