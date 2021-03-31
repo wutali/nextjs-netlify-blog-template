@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params.post as string;
   const source = fs.readFileSync(slugToPostContent[slug].fullPath, "utf8");
   const { content, data } = matter(source, {
-    engines: { yaml: (s) => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }) as object }
+    engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object }
   });
   const mdxSource = await renderToString(content, { components, scope: data });
   return {
