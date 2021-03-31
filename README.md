@@ -55,8 +55,7 @@ The following instructions introduce common customization points like adding new
 
 ### Styling pages by a customized theme
 
-All source codes related to the blog are under [components](/src/components), [pages](/src/pages), and
-[layouts](/src/layouts) directory.
+All source codes related to the blog are under [components](/src/components) and [pages](/src/pages) directory.
 You can modify it freely if you want to apply your design theme.
 All components use [styled-jsx](https://github.com/vercel/styled-jsx) and [css-modules](https://github.com/css-modules/css-modules) to define their styles, but you can choose any styling libraries for designing your theme.
 
@@ -68,7 +67,7 @@ public: images, favicons and other static assets
 src
 ├── assets: other assets using inside of components
 ├── components: pieces of components consisting of pages
-├── layouts: layout components for each post page
+├── content: mdx files for each post page
 ├── lib: project libraries like data fetching or pagination
 └── pages: page components managing by Next.js
 ```
@@ -81,14 +80,14 @@ Then reference these implementations for adding new metadata:
 - [public/admin/config.yml](/public/admin/config.yml#L51): author metadata definition for Netlify CMS
 - [src/lib/authors.tsx](/src/lib/authors.ts): fetches metadata and defines utility functions for components
 - [meta/authors.yml](/src/meta/authors.yml): author content managed by Netlify CMS
-- [layouts/index.tsx](/src/layouts/index.tsx): displays author content for each page
+- [src/components/PostLayout.tsx](/src/components/PostLayout.tsx): displays author content for each page
 
 You understood they have four steps to add the category metadata on your project after you read the above source codes:
 
 1. Define the category metadata on the above Netlify config file
 2. Create an empty file named with `categories.yml` under [meta](/src/meta/) directory
 3. Create a new module for fetching category metadata
-4. Display the category metadata on [layouts](/src/layouts/index.tsx#L71) or other components you want
+4. Display the category metadata on [src/components/PostLayout.tsx](/src/components/PostLayout.tsx#L75) or other components you want
 
 It is all you have to do. After that, you can access Netlify CMS and create new categories at any time.
 
