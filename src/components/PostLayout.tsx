@@ -97,6 +97,7 @@ export default function PostLayout({
               margin: 0 auto;
               padding: 0 1.5rem;
               box-sizing: border-box;
+              z-index: 0;
             }
             .metadata div {
               display: inline-block;
