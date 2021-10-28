@@ -17,12 +17,12 @@ export default function Index() {
           </h1>
           <span className="handle">@nextjs-netlify-blog</span>
           <h2>A blog template with Next.js and Netlify.</h2>
-          <h1>{{ title }}</h1>
+          <h1>{title}</h1>
 
 
 <div id="fullwidth" class="ls-overflow-visible">
 		<div id="contain">
-    {{ layoutContent | safe }}
+    {layoutContent | safe}
 <table class="sheru-cp-section table wrap">
   <thead class="table__head">
     <tr class="table__row">
@@ -34,25 +34,25 @@ export default function Index() {
     </tr>
   </thead>
   <tbody class="table__body">
-  {% for froggy in list %}
+<!--   {% for froggy in list %} -->
     <tr class="table__row">
       <th class="table__cell table__cell--head" scope="row" data-title="Name">
-        {{ froggy.name }}
+        {froggy.name}
       </th>
       <th class="table__cell table__cell--head" scope="row" data-title="Date">
-        {{ froggy.date }}
+        {froggy.date}
       </th>
       <td class="table__cell" data-title="Description">
-        {{ froggy.description }}
+        {froggy.description}
       </td>
       <td class="table__cell" data-title="View">
-        <a href="{{ froggy.asset }}" target="_blank">View</a>
+        <a href="{froggy.asset}" target="_blank">View</a>
       </td>
       <td class="table__cell" data-title="Download">
-        <a download href="{{ froggy.asset }}">Download</a>
+        <a download href="{froggy.asset}">Download</a>
       </td>
     </tr>
-    {% endfor %}
+<!--     {% endfor %} -->
   </tbody>
 </table>
 </div>
