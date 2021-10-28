@@ -17,7 +17,46 @@ export default function Index() {
           </h1>
           <span className="handle">@nextjs-netlify-blog</span>
           <h2>A blog template with Next.js and Netlify.</h2>
-          <SocialList />
+          <h1>{{ title }}</h1>
+
+
+<div id="fullwidth" class="ls-overflow-visible">
+		<div id="contain">
+    {{ layoutContent | safe }}
+<table class="sheru-cp-section table wrap">
+  <thead class="table__head">
+    <tr class="table__row">
+      <th class="table__cell table__cell--head" scope="col">Name</th>
+      <th class="table__cell table__cell--head" scope="col">Date</th>
+      <th class="table__cell table__cell--head" scope="col">Description</th>
+      <th class="table__cell table__cell--head" scope="col">View</th>
+      <th class="table__cell table__cell--head" scope="col">Download</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+  {% for froggy in list %}
+    <tr class="table__row">
+      <th class="table__cell table__cell--head" scope="row" data-title="Name">
+        {{ froggy.name }}
+      </th>
+      <th class="table__cell table__cell--head" scope="row" data-title="Date">
+        {{ froggy.date }}
+      </th>
+      <td class="table__cell" data-title="Description">
+        {{ froggy.description }}
+      </td>
+      <td class="table__cell" data-title="View">
+        <a href="{{ froggy.asset }}" target="_blank">View</a>
+      </td>
+      <td class="table__cell" data-title="Download">
+        <a download href="{{ froggy.asset }}">Download</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</div>
         </div>
       </div>
       <style jsx>{`
