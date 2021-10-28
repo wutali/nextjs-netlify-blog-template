@@ -139,3 +139,57 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+  - name: "pages"
+    label: "Page"
+    folder: "pages"
+    create: true # Change to true to allow editors to create new pages
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+        name: "eleventyNavigation"
+        widget: "object"
+        fields:
+          - { label: "Key", name: "key", widget: "string" }
+          - { label: "Order", name: "order", widget: "number", default: 0 }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: List
+        name: list
+        required: true
+        widget: list
+        hint: ""
+        default: ""
+        allow_add: true
+        fields:
+          - label: "Asset"
+            name: "asset"
+            required: true
+            widget: file
+            hint: ""
+            default: ""
+            allow_multiple: true
+          - label: "Name"
+            name: "name"
+            required: true
+            widget: string
+            hint: ""
+            default: ""
+          - label: "Description"
+            name: "description"
+            required: true
+            widget: string
+            hint: ""
+            default: ""
+          - label: "Date"
+            name: "date"
+            required: true
+            widget: datetime
+            hint: ""
+            default: ""
+            date_format: "DD.MM.YYYY" # e.g. 24.12.2021
+            time_format: "HH:mm" # e.g. 21:07
+            format: "LLL"
+            picker_utc: false
+
