@@ -33,7 +33,6 @@ export default function Index() {
     </tr>
   </thead>
   <tbody className="table__body">
-<!--   {% for froggy in list %} -->
     <tr className="table__row">
       <th className="table__cell table__cell--head" scope="row" data-title="Name">
         froggy.name
@@ -51,7 +50,6 @@ export default function Index() {
         <a download href="froggy.asset">Download</a>
       </td>
     </tr>
-<!--     {% endfor %} -->
   </tbody>
 </table>
 </div>
