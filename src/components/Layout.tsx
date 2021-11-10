@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navigation from "./Navigation";
+import SideNav from "./SideNav";
 
 type Props = {
   children: React.ReactNode;
@@ -16,6 +17,7 @@ export default function Layout({ children }: Props) {
       </Head>
       <nav>
         <Navigation />
+        <SideNav/> 
       </nav>
       <main>{children}</main>
       <style jsx>
