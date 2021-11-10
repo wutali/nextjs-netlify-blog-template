@@ -1,11 +1,11 @@
-// import { ReactComponent as BellIcon } from './icons/bell.svg';
-// import { ReactComponent as MessengerIcon } from './icons/messenger.svg';
-// import { ReactComponent as CaretIcon } from './icons/caret.svg';
-// import { ReactComponent as PlusIcon } from './icons/plus.svg';
-// import { ReactComponent as CogIcon } from './icons/cog.svg';
-// import { ReactComponent as ChevronIcon } from './icons/chevron.svg';
-// import { ReactComponent as ArrowIcon } from './icons/arrow.svg';
-// import { ReactComponent as BoltIcon } from './icons/bolt.svg';
+import BellIcon from '../assets/icons/bell.svg';
+import MessengerIcon from '../assets/icons/messenger.svg';
+import CaretIcon from '../assets/icons/caret.svg';
+import PlusIcon from '../assets/icons/plus.svg';
+import CogIcon from '../assets/icons/cog.svg';
+import ChevronIcon from '../assets/icons/chevron.svg';
+import ArrowIcon from '../assets/icons/arrow.svg';
+import BoltIcon from '../assets/icons/bolt.svg';
 
 import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
@@ -13,13 +13,7 @@ import { CSSTransition } from 'react-transition-group';
 function SideNav() {
   return (
     <Navbar>
-      <NavItem />
-      <NavItem />
-      <NavItem />
-
-      <NavItem>
-        <DropdownMenu></DropdownMenu>
-      </NavItem>
+        <DropdownMenu/>
     </Navbar>
   );
 }
@@ -62,7 +56,7 @@ function DropdownMenu() {
 
   function DropdownItem(props) {
     return (
-      <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+      <a href={props.link ? props.link : "#"} className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
         <span className="icon-button">{props.leftIcon}</span>
         {props.children}
         <span className="icon-right">{props.rightIcon}</span>
@@ -71,7 +65,7 @@ function DropdownMenu() {
   }
 
   return (
-    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+    <div className="dropdown" ref={dropdownRef}>
 
       <CSSTransition
         in={activeMenu === 'main'}
@@ -107,8 +101,8 @@ function DropdownMenu() {
           <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
             <h2>My Tutorial</h2>
           </DropdownItem>
-          <DropdownItem leftIcon={<BoltIcon />}>HTML</DropdownItem>
-          <DropdownItem leftIcon={<BoltIcon />}>CSS</DropdownItem>
+          <DropdownItem link={"www.google.com"} leftIcon={<BoltIcon />}>HTML</DropdownItem>
+          <DropdownItem link={"/something/else"} leftIcon={<BoltIcon />}>CSS</DropdownItem>
           <DropdownItem leftIcon={<BoltIcon />}>JavaScript</DropdownItem>
           <DropdownItem leftIcon={<BoltIcon />}>Awesome!</DropdownItem>
         </div>
