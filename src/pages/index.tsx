@@ -16,7 +16,7 @@ export default function Index() {
             Hi, We're not Next.js & Netlify<span className="fancy">.</span>
           </h1>
           <span className="handle">@ne xtjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
+          <h2>A blog template with Next.js and Netlify.</h2> 
         </div>
       </div>
       <style jsx>{`
