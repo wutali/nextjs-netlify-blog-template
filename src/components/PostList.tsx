@@ -18,7 +18,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
     <div className={"container"}>
       <div className={"posts"}>
         <ul className={"post-list"}>
-          {posts.slice(0, 5).map((it, i) => (
+          {posts.slice(0, 8).map((it, i) => (
             <li key={i}>
               <PostItem post={it} />
             </li>
