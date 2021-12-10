@@ -1,3 +1,4 @@
+import IdentityWidget from "../components/IdentityWidget";
 import Layout from "../components/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
@@ -6,7 +7,9 @@ import { SocialList } from "../components/SocialList";
 
 export default function Index() {
   return (
+    
     <Layout>
+      <IdentityWidget />
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
