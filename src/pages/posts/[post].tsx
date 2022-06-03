@@ -1,7 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import renderToString from "next-mdx-remote/render-to-string";
-import { MdxRemote } from "next-mdx-remote/types";
-import hydrate from "next-mdx-remote/hydrate";
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
 import matter from "gray-matter";
 import { fetchPostContent } from "../../lib/posts";
 import fs from "fs";
@@ -20,7 +19,7 @@ export type Props = {
   tags: string[];
   author: string;
   description?: string;
-  source: MdxRemote.Source;
+  source: any;
 };
 
 const components = { InstagramEmbed, YouTube, TwitterTweetEmbed };
@@ -39,7 +38,6 @@ export default function Post({
   description = "",
   source,
 }: Props) {
-  const content = hydrate(source, { components })
   return (
     <PostLayout
       title={title}
@@ -49,7 +47,7 @@ export default function Post({
       author={author}
       description={description}
     >
-      {content}
+      <MDXRemote {...source} components={components} />
     </PostLayout>
   )
 }
@@ -68,7 +66,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { content, data } = matter(source, {
     engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object }
   });
-  const mdxSource = await renderToString(content, { components, scope: data });
+  const mdxSource = await serialize(content, { scope: data });
   return {
     props: {
       title: data.title,
