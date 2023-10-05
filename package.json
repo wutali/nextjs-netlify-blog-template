@@ -23,7 +23,7 @@
     "react-dom": "17.0.2",
     "react-instagram-embed": "^2.0.0",
     "react-schemaorg": "^1.3.1",
-    "react-twitter-embed": "^3.0.3",
+    "react-twitter-embed": "^4.0.4",
     "react-youtube": "^7.13.1",
     "schema-dts": "^0.8.2"
   },
